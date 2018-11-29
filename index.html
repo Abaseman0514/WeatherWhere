@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+      <title>WeatherWear</title>
+</head>
+
+<body>
+
+    <ng-view></ng-view>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+    <script src="components/userPreferences/userPreferences.js"></script>
+    <script src="components/userPreferences/userPreferences-controller.js"></script>
+    <script src="components/weather/weather.js"></script>
+    <script src="components/weather/weather-controller.js"></script>
+    <script src="service/weather-service.js"></script>
+
+
+</body>
+
+</html>
