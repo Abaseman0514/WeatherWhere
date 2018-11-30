@@ -3,7 +3,7 @@
         .config(function ($routeProvider) {
             $routeProvider
                 .when('/', {
-                    template: '<user-preferences></user-preferences>'
+                    template: '<user-Prefs></user-Prefs>'
                 })
                 .when('/weather', {
                     template: '<weather></weather>'
