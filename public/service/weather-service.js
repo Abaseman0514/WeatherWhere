@@ -8,7 +8,7 @@
             
             service.getWeather = function(){
     
-                return $http.get('https://thingproxy.freeboard.io/fetch/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/42.331429,-83.045753').then((responseData) => {
+                return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/42.331429,-83.045753').then((responseData) => {
                         service.weatherData = responseData.data;
                         console.log("This is the data", responseData.data);
                         
