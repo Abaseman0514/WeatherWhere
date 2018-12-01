@@ -1,13 +1,22 @@
+<header class="title">WeatherWhere <img src="images/header.jpg" alt="collage of weather images" class="header"></header>
+<section class="prefs">
 
-<button id="submit" ng-click="$ctrl.user()">Submit</button>
-<button ng-click="$ctrl.begDay()">Calculate Time</button>
-<div class="slidecontainer">
+<span class="split">
+  <img src="images/sky.png" alt="clouds in a blue sky" class="day">
+  <img src="images/star.jpg" alt="starry night" class="night">
+</span>
+
+  <button ng-click="$ctrl.begDay()">Calculate Time</button>
+  <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
   </div>
- {{$ctrl.userData.timezone}}
- {{$ctrl.userData.currently.apparentTemperature}}
- {{$ctrl.userData.currently.time}}
- {{$ctrl.dayValue}}
+  {{$ctrl.userData.timezone}}
+  {{$ctrl.userData.currently.apparentTemperature}}
+  {{$ctrl.userData.currently.time}}
+  {{$ctrl.dayValue}}
+  <button id="submit" ng-click="$ctrl.user()">Submit</button>
+</section>
+
 
 
 
