@@ -1,7 +1,10 @@
-.header {
+.title {
     width: 100%;
     height: 15%; 
-    /* mobile first - browser = 200px */
+    text-shadow: -5px -1px 6px rgba(253, 85, 122, 0.87);
+    outline-color: black;
+    color: white;
+    text-align: center;
 }
 
 .split {
