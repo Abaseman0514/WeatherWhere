@@ -1,0 +1,8 @@
+.split {
+    display: flex;
+}
+.day,
+.night
+{
+    width: 50%;
+}
