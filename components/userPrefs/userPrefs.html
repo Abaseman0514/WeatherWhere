@@ -1,6 +1,12 @@
-<h1>Test</h1>
-<button id="submit" ng-click="$ctrl.userData()">Submit</button>
- {{$ctrl.userData}}
- <button onclick="getLocation()">Try It</button>
 
-<p id="demo"></p>
+<button id="submit" ng-click="$ctrl.user()">Submit</button>
+<button ng-click="$ctrl.begDay()">Calculate Time</button>
+<div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
+  </div>
+ {{$ctrl.userData.timezone}}
+ {{$ctrl.userData.currently.apparentTemperature}}
+ {{$ctrl.userData.currently.time}}
+ {{$ctrl.dayValue}}
+
+

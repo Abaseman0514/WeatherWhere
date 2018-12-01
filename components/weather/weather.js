@@ -1,6 +1,6 @@
 "use strict"; {
     angular.module('app')
-        .component('weatherController', {
+        .component('weather', {
             controller: 'weatherController',
             templateUrl: 'components/weather/weather.html',
 
