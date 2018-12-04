@@ -11,16 +11,13 @@
 .split {
     display: flex;
 }
-.day,
+/* .day,
 .night
-<<<<<<< HEAD
 {
     
-=======
 {    
->>>>>>> d469e37ea63d5cae076bed774e57e7e6c78801aa
     width: 50%;
-}
+} */
 
 /* SLIDER */
 * {box-sizing: border-box;}

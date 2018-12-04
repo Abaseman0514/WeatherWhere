@@ -2,17 +2,30 @@
     angular.module('app')
         .controller('userPrefsController', function (weatherService) {
             const $ctrl = this;
-            $ctrl.weatherTemp = [0, 20, 40, 60, 80, 100];
-            $ctrl.dayLightTime = [0, 8, 10, 12, 14, 16, 24];
             weatherService.getWeather().then(result => {
-                $ctrl.userData = result
+              $ctrl.userData = result
             })
             $ctrl.user = function() {
-              if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
+              //const usernum = 70;
+              const dayLightTemp = [{temp: 0, dayTime: 0, activity:"Stay Inside"},{temp: 20, dayTime: 8, activity:"Drink Hot Chocolate" },
+              {temp: 40, dayTime: 10,activity:"Go Axe Throwing"},{temp: 60, dayTime: 12, activity:"Go Bike Riding"}, {temp: 80, dayTime: 14, activity:"Get Ice Cream"},
+              {temp: 100, dayTime: 16, activity:"Drink Water"}, {temp: 120, dayTime: 24, activity:"Drink Water"},];
+             
+              let tempDescription;
+              for (const userInfo of dayLightTemp) {
+                  if ($ctrl.dayValue <= userInfo.temp) {
+                      tempDescription = userInfo.activity
+                      console.log(userInfo.activity);
+                      break;
+                  }
+                  }
+
+// console.log(tempDescription);
+//               if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
                 
-                console.log($ctrl.weatherTemp[1] + 'Values Matching');
-                    };
-            console.log($ctrl.dayValue);
+//                 console.log($ctrl.weatherTemp[1] + 'Values Matching');
+//                     };
+//             console.log($ctrl.dayValue);
             }
          
 
@@ -61,19 +74,7 @@
                 console.log(totalHours);
                 $ctrl.total = totalHours;
                }
-               
-<<<<<<< HEAD
-        });
-
-
-
-
-
-
-=======
-      
->>>>>>> d469e37ea63d5cae076bed774e57e7e6c78801aa
-        function initComparisons() {
+function initComparisons() {
             var x, i;
             /*find all elements with an "overlay" class:*/
             x = document.getElementsByClassName("img-comp-overlay");
@@ -116,6 +117,7 @@
               }
               function slideFinish() {
                 /*the slider is no longer clicked:*/
+                console.log(img.offsetWidth);
                 clicked = 0;
               }
               function slideMove(e) {
