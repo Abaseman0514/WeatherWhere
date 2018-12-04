@@ -117,6 +117,7 @@ function initComparisons() {
               }
               function slideFinish() {
                 /*the slider is no longer clicked:*/
+             
                 console.log(img.offsetWidth);
                 clicked = 0;
               }
