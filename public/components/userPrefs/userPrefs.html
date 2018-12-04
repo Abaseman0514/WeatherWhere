@@ -2,12 +2,7 @@
 <header class="title">WeatherWhere <img src="images/header.jpg" alt="collage of weather images" class="header"></header>
 <section class="prefs">
 
-<span class="split">
-  <img src="images/sky.jpg" alt="clouds in a blue sky" class="day">
-  <img src="images/star.jpg" alt="starry night" class="night">
-</span>
-
-  <button ng-click="$ctrl.begDay()">Calculate Time</button>
+<button ng-click="$ctrl.begDay()">Calculate Time</button>
   <div class="slidecontainer">
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
   </div>
@@ -22,13 +17,19 @@
 
 <div class="img-comp-container">
     <div class="img-comp-img">
-      <img src="images/sky.jpg" width="300" height="200">
+      <img src="images/star.jpg" width="1000" height="500">
     </div>
     <div class="img-comp-img img-comp-overlay">
-      <img src="images/star.jpg" width="300" height="200">
+      <img src="images/sky.jpg" width="1000" height="500">
     </div>
   </div>
-  <script>
-      initComparisons();
-      </script>
+  
+  <div class="img-comp-container">
+    <div class="img-comp-img">
+      <img src="images/hot.jpg" width=500 height="500">
+    </div>
+    <div class="img-comp-img img-comp-overlay">
+      <img src="images/cold.jpg" width=500 height="500">
+    </div>
+  </div>
 

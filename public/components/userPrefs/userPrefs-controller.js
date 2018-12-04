@@ -55,7 +55,7 @@
                 console.log(endTotalHours-begTotalHours);
                }
                
-        });
+      
         function initComparisons() {
             var x, i;
             /*find all elements with an "overlay" class:*/
@@ -131,6 +131,6 @@
                 slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
               }
             }
-          }
-
+          }initComparisons();
+        });
 }
