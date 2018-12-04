@@ -1,4 +1,24 @@
-<h1>test2</h1>
+<h1>WeatherWhere</h1>
+<h3>
 {{$ctrl.userData.timezone}}
-{{$ctrl.userData.currently.apparentTemperature}}
-{{$ctrl.userData.currently.icon}}
+</h3>
+<div>
+Outside Temp: {{$ctrl.userData.currently.apparentTemperature}}
+<p>Summary: {{$ctrl.userData.currently.summary}}</p>
+</div>
+<div>
+<h3>What to wear today</h3>
+{{$ctrl.wear}}
+</div>
+<div>
+    <h3>Popular Events</h3>
+   <p>{{$ctrl.actOne}}</p>
+   <p>{{$ctrl.actTwo}}</p>
+   <p>{{$ctrl.actThree}}</p>
+</div>
+<button id="submit" ng-click="$ctrl.user()">Submit</button>
+
+
+<form>
+    <input type = "button" ng-click = "$ctrl.getLocation();" value = "Get Location"/>
+  </form>
