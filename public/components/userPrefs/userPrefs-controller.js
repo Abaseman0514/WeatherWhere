@@ -2,11 +2,16 @@
     angular.module('app')
         .controller('userPrefsController', function (weatherService) {
             const $ctrl = this;
+            $ctrl.weatherTemp = [0, 20, 40, 60, 80, 100];
+            $ctrl.dayLightTime = [0, 8, 10, 12, 14, 16, 24];
             weatherService.getWeather().then(result => {
                 $ctrl.userData = result
             })
             $ctrl.user = function() {
-           
+              if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
+                
+                console.log($ctrl.weatherTemp[1] + 'Values Matching');
+                    };
             console.log($ctrl.dayValue);
             }
          
@@ -48,14 +53,22 @@
                 var EndDayTime = monthEnd+'-'+dayEnd+'-'+yearEnd+' '+hoursEnd + ':' + minutesEnd.substr(-2) + ':' + secondsEnd.substr(-2);
                 var begTotalHours = hoursBeg;
                 var endTotalHours = hoursEnd;
+                var totalHours = (endTotalHours-begTotalHours);
                 console.log(begDayTime);
                 console.log(EndDayTime);
                 console.log(endTotalHours);
                 console.log(begTotalHours);
-                console.log(endTotalHours-begTotalHours);
+                console.log(totalHours);
+                $ctrl.total = totalHours;
                }
                
         });
+
+
+
+
+
+
         function initComparisons() {
             var x, i;
             /*find all elements with an "overlay" class:*/
