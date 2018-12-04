@@ -62,6 +62,7 @@
                 $ctrl.total = totalHours;
                }
                
+<<<<<<< HEAD
         });
 
 
@@ -69,6 +70,9 @@
 
 
 
+=======
+      
+>>>>>>> d469e37ea63d5cae076bed774e57e7e6c78801aa
         function initComparisons() {
             var x, i;
             /*find all elements with an "overlay" class:*/
@@ -144,6 +148,6 @@
                 slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
               }
             }
-          }
-
+          }initComparisons();
+        });
 }
