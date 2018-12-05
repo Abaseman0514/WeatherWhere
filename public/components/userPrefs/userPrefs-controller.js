@@ -74,11 +74,7 @@
                 console.log(totalHours);
                 $ctrl.total = totalHours;
                }
-<<<<<<< HEAD
-        function initComparisons() {
-=======
 function initComparisons() {
->>>>>>> 2cdf6d54ee7678033a17cd4eb33a3a22c036bf20
             var x, i;
             /*find all elements with an "overlay" class:*/
             x = document.getElementsByClassName("img-comp-overlay");
@@ -107,37 +103,6 @@ function initComparisons() {
               /*and another function when the mouse button is released:*/
               window.addEventListener("mouseup", slideFinish);
               /*or touched (for touch screens:*/
-<<<<<<< HEAD
-                slider.addEventListener("touchstart", slideReady);
-                /*and released (for touch screens:*/
-                  window.addEventListener("touchstop", slideFinish);
-                  function slideReady(e) {
-                    /*prevent any other actions that may occur when moving over the image:*/
-                    e.preventDefault();
-                    /*the slider is now clicked and ready to move:*/
-                    clicked = 1;
-                    /*execute a function when the slider is moved:*/
-                    window.addEventListener("mousemove", slideMove);
-                    window.addEventListener("touchmove", slideMove);
-                  }
-                  function slideFinish() {
-                    /*the slider is no longer clicked:*/
-                    console.log(img.offsetWidth)
-                    clicked = 0;
-                  }
-                  function slideMove(e) {
-                    var pos;
-                    /*if the slider is no longer clicked, exit this function:*/
-                    if (clicked == 0) return false;
-                    /*get the cursor's x position:*/
-                    pos = getCursorPos(e)
-                    /*prevent the slider from being positioned outside the image:*/
-                    if (pos < 0) pos = 0;
-                    if (pos > w) pos = w;
-                    /*execute a function that will resize the overlay image according to the cursor:*/
-                    slide(pos);
-                  }
-=======
               slider.addEventListener("touchstart", slideReady);
                /*and released (for touch screens:*/
               window.addEventListener("touchstop", slideFinish);
@@ -168,7 +133,6 @@ function initComparisons() {
                 /*execute a function that will resize the overlay image according to the cursor:*/
                 slide(pos);
               }
->>>>>>> 2cdf6d54ee7678033a17cd4eb33a3a22c036bf20
               function getCursorPos(e) {
                 var a, x = 0;
                 e = e || window.event;
