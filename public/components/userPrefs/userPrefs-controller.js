@@ -61,18 +61,6 @@
                 console.log(totalHours);
                 $ctrl.total = totalHours;
                }
-               
-<<<<<<< HEAD
-        });
-
-
-
-
-
-
-=======
-      
->>>>>>> d469e37ea63d5cae076bed774e57e7e6c78801aa
         function initComparisons() {
             var x, i;
             /*find all elements with an "overlay" class:*/
@@ -102,34 +90,35 @@
               /*and another function when the mouse button is released:*/
               window.addEventListener("mouseup", slideFinish);
               /*or touched (for touch screens:*/
-              slider.addEventListener("touchstart", slideReady);
-               /*and released (for touch screens:*/
-              window.addEventListener("touchstop", slideFinish);
-              function slideReady(e) {
-                /*prevent any other actions that may occur when moving over the image:*/
-                e.preventDefault();
-                /*the slider is now clicked and ready to move:*/
-                clicked = 1;
-                /*execute a function when the slider is moved:*/
-                window.addEventListener("mousemove", slideMove);
-                window.addEventListener("touchmove", slideMove);
-              }
-              function slideFinish() {
-                /*the slider is no longer clicked:*/
-                clicked = 0;
-              }
-              function slideMove(e) {
-                var pos;
-                /*if the slider is no longer clicked, exit this function:*/
-                if (clicked == 0) return false;
-                /*get the cursor's x position:*/
-                pos = getCursorPos(e)
-                /*prevent the slider from being positioned outside the image:*/
-                if (pos < 0) pos = 0;
-                if (pos > w) pos = w;
-                /*execute a function that will resize the overlay image according to the cursor:*/
-                slide(pos);
-              }
+                slider.addEventListener("touchstart", slideReady);
+                /*and released (for touch screens:*/
+                  window.addEventListener("touchstop", slideFinish);
+                  function slideReady(e) {
+                    /*prevent any other actions that may occur when moving over the image:*/
+                    e.preventDefault();
+                    /*the slider is now clicked and ready to move:*/
+                    clicked = 1;
+                    /*execute a function when the slider is moved:*/
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                  }
+                  function slideFinish() {
+                    /*the slider is no longer clicked:*/
+                    console.log(img.offsetWidth)
+                    clicked = 0;
+                  }
+                  function slideMove(e) {
+                    var pos;
+                    /*if the slider is no longer clicked, exit this function:*/
+                    if (clicked == 0) return false;
+                    /*get the cursor's x position:*/
+                    pos = getCursorPos(e)
+                    /*prevent the slider from being positioned outside the image:*/
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /*execute a function that will resize the overlay image according to the cursor:*/
+                    slide(pos);
+                  }
               function getCursorPos(e) {
                 var a, x = 0;
                 e = e || window.event;
@@ -147,6 +136,7 @@
                 /*position the slider:*/
                 slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
               }
+              
             }
           }initComparisons();
         });

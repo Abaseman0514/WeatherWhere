@@ -7,21 +7,6 @@
     text-align: center;
 }
 
-
-.split {
-    display: flex;
-}
-.day,
-.night
-<<<<<<< HEAD
-{
-    
-=======
-{    
->>>>>>> d469e37ea63d5cae076bed774e57e7e6c78801aa
-    width: 50%;
-}
-
 /* SLIDER */
 * {box-sizing: border-box;}
 
@@ -39,7 +24,7 @@
 
 .img-comp-img img {
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .img-comp-slider {
@@ -49,7 +34,7 @@
   /*set the appearance of the slider:*/
   width: 40px;
   height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
+  background-color: grey;
+  opacity: 0.8;
   border-radius: 50%;
 }
