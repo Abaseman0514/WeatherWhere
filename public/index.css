@@ -48,7 +48,7 @@ header {
 
 .img-comp-img img {
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 .daylight {
@@ -58,7 +58,7 @@ header {
   /*set the appearance of the slider:*/
   width: 40px;
   height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
+  background-color: grey;
+  opacity: 0.8;
   border-radius: 50%;
 }
