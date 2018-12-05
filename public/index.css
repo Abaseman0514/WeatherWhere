@@ -1,42 +1,46 @@
+body {
+  background-image: linear-gradient(rgb(106, 35, 139), #0f270f);
+}
+
 header {
   background: #000000 url(images/header.jpg) 100% 100% no-repeat;
-  display: flex;
   width: 100%;
   height: 200px;
 }
 
 .title {
-  position: relative;
-    font-size: 100px;
-    text-shadow: -5px -1px 6px rgba(114, 12, 34, 0.87);
-    color: rgb(172, 64, 223);
-    margin-top: 100px;
-    justify-content: flex-end;
-     }
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: 'Courgette', cursive;
+  font-size: 100px;
+  text-shadow: -5px -1px 6px rgba(241, 214, 220, 0.87);
+  color: rgb(53, 17, 70);
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
 .home,
 .weather {
-  float: right;
+  float: left;
 }
 
-
-.split {
-    display: flex;
+.like {
+  text-align: center;
+  font-size: 40px;
+  color: 
 }
-/* .day,
-.night
-{
-    
-{    
-    width: 50%;
-} */
 
 /* SLIDER */
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .img-comp-container {
   position: relative;
-  height: 500px; /*should be the same height as the images*/
+  height: 500px;
+  /*should be the same height as the images*/
+  
 }
 
 .img-comp-img {
@@ -61,4 +65,8 @@ header {
   background-color: grey;
   opacity: 0.8;
   border-radius: 50%;
+}
+
+footer{
+  color: white;
 }
