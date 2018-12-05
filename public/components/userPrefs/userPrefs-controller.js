@@ -2,17 +2,30 @@
     angular.module('app')
         .controller('userPrefsController', function (weatherService) {
             const $ctrl = this;
-            $ctrl.weatherTemp = [0, 20, 40, 60, 80, 100];
-            $ctrl.dayLightTime = [0, 8, 10, 12, 14, 16, 24];
             weatherService.getWeather().then(result => {
-                $ctrl.userData = result
+              $ctrl.userData = result
             })
             $ctrl.user = function() {
-              if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
+              //const usernum = 70;
+              const dayLightTemp = [{temp: 0, dayTime: 0, activity:"Stay Inside"},{temp: 20, dayTime: 8, activity:"Drink Hot Chocolate" },
+              {temp: 40, dayTime: 10,activity:"Go Axe Throwing"},{temp: 60, dayTime: 12, activity:"Go Bike Riding"}, {temp: 80, dayTime: 14, activity:"Get Ice Cream"},
+              {temp: 100, dayTime: 16, activity:"Drink Water"}, {temp: 120, dayTime: 24, activity:"Drink Water"},];
+             
+              let tempDescription;
+              for (const userInfo of dayLightTemp) {
+                  if ($ctrl.dayValue <= userInfo.temp) {
+                      tempDescription = userInfo.activity
+                      console.log(userInfo.activity);
+                      break;
+                  }
+                  }
+
+// console.log(tempDescription);
+//               if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
                 
-                console.log($ctrl.weatherTemp[1] + 'Values Matching');
-                    };
-            console.log($ctrl.dayValue);
+//                 console.log($ctrl.weatherTemp[1] + 'Values Matching');
+//                     };
+//             console.log($ctrl.dayValue);
             }
          
 
@@ -61,7 +74,11 @@
                 console.log(totalHours);
                 $ctrl.total = totalHours;
                }
+<<<<<<< HEAD
         function initComparisons() {
+=======
+function initComparisons() {
+>>>>>>> 2cdf6d54ee7678033a17cd4eb33a3a22c036bf20
             var x, i;
             /*find all elements with an "overlay" class:*/
             x = document.getElementsByClassName("img-comp-overlay");
@@ -90,6 +107,7 @@
               /*and another function when the mouse button is released:*/
               window.addEventListener("mouseup", slideFinish);
               /*or touched (for touch screens:*/
+<<<<<<< HEAD
                 slider.addEventListener("touchstart", slideReady);
                 /*and released (for touch screens:*/
                   window.addEventListener("touchstop", slideFinish);
@@ -119,6 +137,38 @@
                     /*execute a function that will resize the overlay image according to the cursor:*/
                     slide(pos);
                   }
+=======
+              slider.addEventListener("touchstart", slideReady);
+               /*and released (for touch screens:*/
+              window.addEventListener("touchstop", slideFinish);
+              function slideReady(e) {
+                /*prevent any other actions that may occur when moving over the image:*/
+                e.preventDefault();
+                /*the slider is now clicked and ready to move:*/
+                clicked = 1;
+                /*execute a function when the slider is moved:*/
+                window.addEventListener("mousemove", slideMove);
+                window.addEventListener("touchmove", slideMove);
+              }
+              function slideFinish() {
+                /*the slider is no longer clicked:*/
+             
+                console.log(img.offsetWidth);
+                clicked = 0;
+              }
+              function slideMove(e) {
+                var pos;
+                /*if the slider is no longer clicked, exit this function:*/
+                if (clicked == 0) return false;
+                /*get the cursor's x position:*/
+                pos = getCursorPos(e)
+                /*prevent the slider from being positioned outside the image:*/
+                if (pos < 0) pos = 0;
+                if (pos > w) pos = w;
+                /*execute a function that will resize the overlay image according to the cursor:*/
+                slide(pos);
+              }
+>>>>>>> 2cdf6d54ee7678033a17cd4eb33a3a22c036bf20
               function getCursorPos(e) {
                 var a, x = 0;
                 e = e || window.event;

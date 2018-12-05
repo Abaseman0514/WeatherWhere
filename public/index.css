@@ -7,6 +7,21 @@
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+
+.split {
+    display: flex;
+}
+/* .day,
+.night
+{
+    
+{    
+    width: 50%;
+} */
+
+>>>>>>> 2cdf6d54ee7678033a17cd4eb33a3a22c036bf20
 /* SLIDER */
 * {box-sizing: border-box;}
 
