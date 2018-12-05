@@ -13,16 +13,18 @@ header {
   width: 100%;
   height: 100%;
   font-family: 'Courgette', cursive;
-  font-size: 100px;
-  text-shadow: -5px -1px 6px rgba(241, 214, 220, 0.87);
-  color: rgb(53, 17, 70);
+  font-size: 91px;
+  text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+  color: rgb(163, 91, 196);
   justify-content: flex-end;
   align-items: flex-end;
 }
 
 .home,
 .weather {
-  float: left;
+  display: flex;
+  font-size: 20px;
+  color: white;
 }
 
 .like {
@@ -39,8 +41,7 @@ header {
 .img-comp-container {
   position: relative;
   height: 500px;
-  /*should be the same height as the images*/
-  
+  /*should be the same height as the images*/  
 }
 
 .img-comp-img {
