@@ -92,7 +92,7 @@ function initComparisons() {
               img.style.width = (w / 2) + "px";
               /*create slider:*/
               slider = document.createElement("DIV");
-              slider.setAttribute("class", "img-comp-slider");
+              slider.setAttribute("class", "daylight");
               /*insert slider*/
               img.parentElement.insertBefore(slider, img);
               /*position the slider in the middle:*/
