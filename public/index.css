@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(rgb(106, 35, 139), #0f270f);
+  background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
 }
 
 header {
@@ -41,6 +41,7 @@ header {
 .img-comp-container {
   position: relative;
   height: 500px;
+
   /*should be the same height as the images*/  
 }
 
@@ -49,6 +50,7 @@ header {
   width: auto;
   height: auto;
   overflow: hidden;
+  
 }
 
 .img-comp-img img {
@@ -68,6 +70,6 @@ header {
   border-radius: 50%;
 }
 
-footer{
+.footer{
   color: white;
 }

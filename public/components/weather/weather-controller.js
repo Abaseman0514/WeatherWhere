@@ -9,10 +9,10 @@
                 //const usernum = 70;
                 const dayTemp = [
                     {temp: 100, clothing: "Swim Suit is best", actOne:"Turn on A/C", actTwo:"Find a pool", actThree: "Drink water"},
-                    {temp: 80, clothing: "Light clothing", actOne:"Go outside", actTwo:"Go camping", actThree: "Go for a bike ride" },
-                    {temp: 60, clothing: "Dress casually", actOne:"Activity one 60", actTwo:"Go for a hike", actThree: "Activity Three 60" },
-                    {temp: 40, clothing: "Dress Warmly", actOne:"Activity one 40", actTwo:"Activity Two 40", actThree: "Activity Three 40" },
-                    {temp: 20, clothing: "Multiple Layers", actOne:"Get the fireplace started", actTwo:"Go Skiing", actThree: "Drink Hot Chocolate" },
+                    {temp: 80, clothing: "Light clothing", actOne:"Take out the boat", actTwo:"Go camping", actThree: "Go for a bike ride" },
+                    {temp: 60, clothing: "Dress casually", actOne:"Go play baseball", actTwo:"Go for a hike", actThree: "Read a book at a park" },
+                    {temp: 40, clothing: "Dress Warmly", actOne:"Go axe throwing", actTwo:"Netflix and Chill -- LOL", actThree: "Get the fireplace ready" },
+                    {temp: 20, clothing: "Multiple Layers", actOne:"Build a snowman", actTwo:"Go Skiing", actThree: "Drink Hot Chocolate" },
                     {temp: 0, clothing: "Bundle Up", actOne:"Stay Inside", actTwo:"Watch TV", actThree: "Play Board Games" }
                 ]
                
