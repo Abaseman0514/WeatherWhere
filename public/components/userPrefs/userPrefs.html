@@ -8,21 +8,21 @@
     <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
   </div> -->
   
-  
+  {{$ctrl.daytime}}
   <div class="img-comp-container">
     <div class="img-comp-img">
       <img src="images/star.jpg">
     </div>
-    <div class="img-comp-img img-comp-overlay">
+    <div class="img-comp-img img-comp-overlay daytime">
       <img src="images/sky.jpg">
     </div>
   </div>
-  
+  {{$ctrl.temperature}}
   <div class="img-comp-container">
     <div class="img-comp-img">
       <img src="images/cold.jpg">
     </div>
-    <div class="img-comp-img img-comp-overlay">
+    <div class="img-comp-img img-comp-overlay temperature">
       <img src="images/hot.jpg">
 
     </div>
