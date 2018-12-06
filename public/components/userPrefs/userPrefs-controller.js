@@ -115,10 +115,13 @@ function initComparisons() {
                 window.addEventListener("mousemove", slideMove);
                 window.addEventListener("touchmove", slideMove);
               }
-              function slideFinish() {
+              function slideFinish(img) {
                 /*the slider is no longer clicked:*/
-             
-                console.log(img.offsetWidth);
+                let firstSquare = document.getElementsByClassName("img-comp-container")[0];
+                let newwidth;
+                firstSquare.outerHTML.width = newwidth;
+                //firstSquare.img.offsetWidth;
+                console.log(newwidth);
                 clicked = 0;
               }
               function slideMove(e) {
