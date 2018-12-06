@@ -5,6 +5,7 @@
             weatherService.getWeather().then(result => {
               $ctrl.userData = result
             })
+            
             $ctrl.user = function() {
               //const usernum = 70;
               const dayLightTemp = [{temp: 0, dayTime: 0, activity:"Stay Inside"},{temp: 20, dayTime: 8, activity:"Drink Hot Chocolate" },
@@ -115,22 +116,16 @@ function initComparisons(className) {
                 window.addEventListener("mousemove", slideMove);
                 window.addEventListener("touchmove", slideMove);
               }
-              function slideFinish(img) {
+              function slideFinish() {
                 /*the slider is no longer clicked:*/
-<<<<<<< HEAD
-                let firstSquare = document.getElementsByClassName("img-comp-container")[0];
-                let newwidth;
-                firstSquare.outerHTML.width = newwidth;
-                //firstSquare.img.offsetWidth;
-                console.log(newwidth);
-=======
                 const percent = (img.offsetWidth/img.parentElement.offsetWidth) * 100
                 $timeout(() => {
                   $ctrl[className] = `${Math.round(percent)}`
+                  console.log($ctrl[className], $ctrl);
+                  weatherService.userdaypref = $ctrl.daytime; 
+                  weatherService.usertemppref = $ctrl.temperature;
+                  clicked = 0;
                 });
-                console.log($ctrl[className], $ctrl);
->>>>>>> 6cabbd73aa0f8a872598ee116410b8118efadd88
-                clicked = 0;
               }
               function slideMove(e) {
                 var pos;
