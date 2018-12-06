@@ -1,6 +1,6 @@
 "use strict"; {
     angular.module('app')
-        .controller('userPrefsController', function (weatherService) {
+        .controller('userPrefsController', function (weatherService, $timeout) {
             const $ctrl = this;
             weatherService.getWeather().then(result => {
               $ctrl.userData = result
@@ -74,10 +74,10 @@
                 console.log(totalHours);
                 $ctrl.total = totalHours;
                }
-function initComparisons() {
+function initComparisons(className) {
             var x, i;
             /*find all elements with an "overlay" class:*/
-            x = document.getElementsByClassName("img-comp-overlay");
+            x = document.getElementsByClassName(className);
             for (i = 0; i < x.length; i++) {
               /*once for each "overlay" element:
               pass the "overlay" element as a parameter when executing the compareImages function:*/
@@ -117,9 +117,11 @@ function initComparisons() {
               }
               function slideFinish() {
                 /*the slider is no longer clicked:*/
-                let firstSquare = document.getElementsByClassName("img-comp-container")[0];
-                firstSquare.data.totalHours = "daylightTime";
-                console.log(img.offsetWidth);
+                const percent = (img.offsetWidth/img.parentElement.offsetWidth) * 100
+                $timeout(() => {
+                  $ctrl[className] = `${Math.round(percent)}`
+                });
+                console.log($ctrl[className], $ctrl);
                 clicked = 0;
               }
               function slideMove(e) {
@@ -153,6 +155,12 @@ function initComparisons() {
               }
               
             }
-          }initComparisons();
+          }
+
+          $ctrl.$onInit = function(){
+            initComparisons('daytime');
+            initComparisons('temperature');
+          }
+
         });
 }
