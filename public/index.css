@@ -3,8 +3,9 @@ body {
 }
 
 header {
-  background: #000000 url(images/header.jpg) 100% 100% no-repeat;
-  width: 100%;
+  background-image: url(images/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 200px;
 }
 
@@ -13,7 +14,7 @@ header {
   width: 100%;
   height: 100%;
   font-family: 'Courgette', cursive;
-  font-size: 91px;
+  font-size: 20px;
   text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
   color: rgb(163, 91, 196);
   justify-content: flex-end;
@@ -33,6 +34,11 @@ header {
   color: white;
 }
 
+.prefs {
+  width: 1000px;
+  margin: 0 auto;
+}
+
 /* SLIDER */
 * {
   box-sizing: border-box;
@@ -40,7 +46,7 @@ header {
 
 .img-comp-container {
   position: relative;
-  height: 500px;
+  height: 200px;
 
   /*should be the same height as the images*/  
 }
@@ -55,6 +61,8 @@ header {
 
 .img-comp-img img {
   display: block;
+  width: 1000px;
+  height: 500px;
   /* vertical-align: middle; */
 }
 
@@ -72,4 +80,90 @@ header {
 
 .footer{
   color: white;
+}
+
+/* tablets */
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
+  }
+  
+  
+  header {
+    background-image: url(images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 200px;
+  }
+  
+  .title {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courgette', cursive;
+    font-size: 91px;
+    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+    color: rgb(163, 91, 196);
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .home,
+  .weather {
+    display: flex;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .like {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+  }
+  
+  /* SLIDER */
+  * {
+    box-sizing: border-box;
+  }
+  
+  .img-comp-container {
+    position: relative;
+    height: 500px;
+  
+    /*should be the same height as the images*/  
+  }
+  
+  .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    
+  }
+  
+  .img-comp-img img {
+    display: block;
+    /* vertical-align: middle; */
+  }
+  
+  .daylight {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    opacity: 0.8;
+    border-radius: 50%;
+  }
+  
+  .footer{
+    color: white;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 768px) {
+
 }
