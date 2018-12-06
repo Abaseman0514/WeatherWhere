@@ -11,14 +11,14 @@
               {temp: 40, dayTime: 10,activity:"Go Axe Throwing"},{temp: 60, dayTime: 12, activity:"Go Bike Riding"}, {temp: 80, dayTime: 14, activity:"Get Ice Cream"},
               {temp: 100, dayTime: 16, activity:"Drink Water"}, {temp: 120, dayTime: 24, activity:"Drink Water"},];
              
-              let tempDescription;
-              for (const userInfo of dayLightTemp) {
-                  if ($ctrl.dayValue <= userInfo.temp) {
-                      tempDescription = userInfo.activity
-                      console.log(userInfo.activity);
-                      break;
-                  }
-                  }
+              // let tempDescription;
+              // for (const userInfo of dayLightTemp) {
+              //     if ($ctrl.dayValue <= userInfo.temp) {
+              //         tempDescription = userInfo.activity
+              //         console.log(userInfo.activity);
+              //         break;
+              //     }
+              //     }
 
 // console.log(tempDescription);
 //               if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
@@ -117,7 +117,8 @@ function initComparisons() {
               }
               function slideFinish() {
                 /*the slider is no longer clicked:*/
-             
+                let firstSquare = document.getElementsByClassName("img-comp-container")[0];
+                firstSquare.data.totalHours = "daylightTime";
                 console.log(img.offsetWidth);
                 clicked = 0;
               }
