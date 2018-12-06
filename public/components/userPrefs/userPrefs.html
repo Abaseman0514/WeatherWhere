@@ -1,38 +1,38 @@
-<h1 class="like">How do you like it?</h1>
-
 <section class="prefs">
-
-
-<!-- <button ng-click="$ctrl.begDay()">Calculate Time</button>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
-  </div> -->
+   
+  <h1 class="like">How do you like it?</h1>
   
+  <!-- <button ng-click="$ctrl.begDay()">Calculate Time</button>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
+    </div> -->
+    <div>
+        {{$ctrl.daytime}}
+      </div>
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="images/star.jpg">
+        </div>
+        <div class="img-comp-img img-comp-overlay daytime">
+          <img src="images/sky.jpg">
+        </div>
+      </div>
+      
+      <div>
+          {{$ctrl.temperature}}
+        </div>
+    <div class="img-comp-container">
+      <div class="img-comp-img">
+        <img src="images/cold.jpg">
+      </div>
+      <div class="img-comp-img img-comp-overlay temperature">
+        <img src="images/hot.jpg">
+      </div>
   
-  <div class="img-comp-container">
-    <div class="img-comp-img">
-      <img src="images/star.jpg">
-    </div>
-    <div class="img-comp-img img-comp-overlay">
-      <img src="images/sky.jpg">
-    </div>
-  </div>
+    
+    <p>Location: {{$ctrl.userData.timezone}}</p>
+    <p>Temp:{{$ctrl.userData.currently.apparentTemperature}}</p>
   
-  <div class="img-comp-container">
-    <div class="img-comp-img">
-      <img src="images/cold.jpg">
-    </div>
-    <div class="img-comp-img img-comp-overlay">
-      <img src="images/hot.jpg">
-
-    </div>
-
-  </section>
-  
-  <section class="submit">
-  <p>Location: {{$ctrl.userData.timezone}}</p>
-  <p>Temp:{{$ctrl.userData.currently.apparentTemperature}}</p>
-  
-  <button id="submit" ng-click="$ctrl.user()">Submit</button>
-  {{$ctrl.values}}
+    <button id="submit" ng-click="$ctrl.user()">Submit</button>
+    {{$ctrl.values}}
   </section>

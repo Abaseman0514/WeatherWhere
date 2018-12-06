@@ -1,20 +1,24 @@
-<h1>WeatherWhere</h1>
-<h3>
+<div class="weatherPage">
+
+<!-- <h1>WeatherWhere</h1> -->
+<div class = "results">
+<h3 class = "timezone">
 {{$ctrl.userData.timezone}}
 </h3>
 <div>
 Outside Temp: {{$ctrl.userData.currently.apparentTemperature}}
-<p>Summary: {{$ctrl.userData.currently.summary}}</p>
+<p class = "summary">Overview: {{$ctrl.userData.currently.summary}}</p>
 </div>
 <div>
-<h3>What to wear today</h3>
+<h3 class = "whatWear">What to wear today</h3>
 {{$ctrl.wear}}
 </div>
 <div>
-    <h3>Popular Activities</h3>
+    <h3 class = "activity">Popular Activities</h3>
    <p>{{$ctrl.actOne}}</p>
    <p>{{$ctrl.actTwo}}</p>
    <p>{{$ctrl.actThree}}</p>
+</div>
 </div>
 <button id="submit" ng-click="$ctrl.user()">Submit</button>
 
@@ -22,3 +26,5 @@ Outside Temp: {{$ctrl.userData.currently.apparentTemperature}}
 <form>
     <input type = "button" ng-click = "$ctrl.getLocation();" value = "Get Location"/>
   </form>
+
+</div>
