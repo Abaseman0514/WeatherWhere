@@ -18,6 +18,7 @@
         </header>
         <a class="home" href="#!/">Home</a>
         <a class="weather" href="#!/weather">Weather</a>
+        <a class="weather" href="#!/social">Message Board</a>
     <ng-view></ng-view>
 
     <p class = "footer"> “Powered by Dark Sky” in a legible manner near the data or any information derived from any data from the Service. This message must, if possible, open a link to https://darksky.net/poweredby/ when clicked or touched. You may not display or invoke the Service or Dark Sky name or logo in any manner that implies a relationship or affiliation with, sponsorship, promotion, or endorsement by Dark Sky, except as authorized by these Terms of Service. </p>
@@ -30,11 +31,20 @@
         crossorigin="anonymous"></script>
     <script src="index.js"></script>
 
+    <script src = "components/board/board.js"></script>
+    <script src = "components/board/board-controller.js"></script>
+    <script src = "components/message/post.js"></script>
+    <script src = "components/message/post-controller.js"></script>
+    <script src = "components/postForm/postForm.js"></script>
+    <script src = "components/postForm/postform-controller.js"></script>
+
     <script src="components/userPrefs/userPrefs.js"></script>
     <script src="components/userPrefs/userPrefs-controller.js"></script>
     <script src="components/weather/weather.js"></script>
     <script src="components/weather/weather-controller.js"></script>
     <script src="service/weather-service.js"></script>
+
+    
 
 
 </body>

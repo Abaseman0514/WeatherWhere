@@ -3,7 +3,8 @@
         .service('weatherService', function ($http) {
             const service = this;
             service.weatherData = [];
-            
+            service.userdaypref = null;
+            service.usertemppref = null;
             
             
             service.getWeather = function(){
