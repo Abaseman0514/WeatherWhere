@@ -6,75 +6,8 @@
               $ctrl.userData = result
             })
             
-            $ctrl.user = function() {
-              //const usernum = 70;
-              const dayLightTemp = [{temp: 0, dayTime: 0, activity:"Stay Inside"},{temp: 20, dayTime: 8, activity:"Drink Hot Chocolate" },
-              {temp: 40, dayTime: 10,activity:"Go Axe Throwing"},{temp: 60, dayTime: 12, activity:"Go Bike Riding"}, {temp: 80, dayTime: 14, activity:"Get Ice Cream"},
-              {temp: 100, dayTime: 16, activity:"Drink Water"}, {temp: 120, dayTime: 24, activity:"Drink Water"},];
-             
-              // let tempDescription;
-              // for (const userInfo of dayLightTemp) {
-              //     if ($ctrl.dayValue <= userInfo.temp) {
-              //         tempDescription = userInfo.activity
-              //         console.log(userInfo.activity);
-              //         break;
-              //     }
-              //     }
+     
 
-// console.log(tempDescription);
-//               if ($ctrl.dayValue >= $ctrl.dayLightTime[1] && $ctrl.dayValue <= $ctrl.dayLightTime[2] && $ctrl.total <= 14 ){
-                
-//                 console.log($ctrl.weatherTemp[1] + 'Values Matching');
-//                     };
-//             console.log($ctrl.dayValue);
-            }
-         
-
-              $ctrl.begDay = function(){
-
-                // Unixtimestamp
-                var unixTimeBeg = $ctrl.userData.daily.data[0].sunriseTime;
-                var unixTimeEnd = $ctrl.userData.daily.data[0].sunsetTime;
-               
-                // Months array
-                var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-               
-                // Convert timestamp to milliseconds
-                var dateBeg = new Date(unixTimeBeg*1000);
-                var dateEnd = new Date(unixTimeEnd*1000);
-                // Year
-                var yearBeg = dateBeg.getFullYear();
-                var yearEnd = dateEnd.getFullYear();
-                // Month
-                var monthBeg = months_arr[dateBeg.getMonth()];
-                var monthEnd = months_arr[dateEnd.getMonth()];
-                // Day
-                var dayBeg = dateBeg.getDate();
-                var dayEnd = dateEnd.getDate();
-                // Hours
-                var hoursBeg = dateBeg.getHours();
-                var hoursEnd = dateEnd.getHours();
-               
-                // Minutes
-                var minutesBeg = "0" + dateBeg.getMinutes();
-                var minutesEnd = "0" + dateEnd.getMinutes();
-                // Seconds
-                var secondsBeg = "0" + dateBeg.getSeconds();
-                var secondsEnd = "0" + dateEnd.getSeconds();
-               
-                // Display date time in MM-dd-yyyy h:m:s format
-                var begDayTime = monthBeg+'-'+dayBeg+'-'+yearBeg+' '+hoursBeg + ':' + minutesBeg.substr(-2) + ':' + secondsBeg.substr(-2);
-                var EndDayTime = monthEnd+'-'+dayEnd+'-'+yearEnd+' '+hoursEnd + ':' + minutesEnd.substr(-2) + ':' + secondsEnd.substr(-2);
-                var begTotalHours = hoursBeg;
-                var endTotalHours = hoursEnd;
-                var totalHours = (endTotalHours-begTotalHours);
-                console.log(begDayTime);
-                console.log(EndDayTime);
-                console.log(endTotalHours);
-                console.log(begTotalHours);
-                console.log(totalHours);
-                $ctrl.total = totalHours;
-               }
 function initComparisons(className) {
             var x, i;
             /*find all elements with an "overlay" class:*/

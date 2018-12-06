@@ -282,6 +282,9 @@
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and over 16 hours of day light";
                             }
+                            else{
+                                $ctrl.noMatch = "No Match"
+                            }
 
                         
                  
