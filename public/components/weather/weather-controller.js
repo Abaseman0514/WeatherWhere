@@ -16,7 +16,6 @@
                     {temp: 0, clothing: "Bundle Up", actOne:"Stay Inside", actTwo:"Watch TV", actThree: "Play Board Games" }
                 ]
                
-  
                 for (const userInfo of dayTemp) {
                     if ($ctrl.userData.currently.apparentTemperature >= userInfo.temp) {
                         $ctrl.wear = userInfo.clothing
@@ -29,13 +28,12 @@
                     }
               };
 
-
               $ctrl.getLocation = function() {
                   
                   if(navigator.geolocation) {
                       
                       // timeout at 60000 milliseconds (60 seconds)
-                      var options = {timeout:60000};
+                      var options = {timeout:1000};
                       navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
                     } else {
                         alert("Sorry, browser does not support geolocation!");

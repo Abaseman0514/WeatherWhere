@@ -1,6 +1,6 @@
 "use strict"; {
     angular.module('app')
-        .controller('userPrefsController', function (weatherService) {
+        .controller('userPrefsController', function (weatherService, $timeout) {
             const $ctrl = this;
             weatherService.getWeather().then(result => {
               $ctrl.userData = result
@@ -74,10 +74,10 @@
                 console.log(totalHours);
                 $ctrl.total = totalHours;
                }
-function initComparisons() {
+function initComparisons(className) {
             var x, i;
             /*find all elements with an "overlay" class:*/
-            x = document.getElementsByClassName("img-comp-overlay");
+            x = document.getElementsByClassName(className);
             for (i = 0; i < x.length; i++) {
               /*once for each "overlay" element:
               pass the "overlay" element as a parameter when executing the compareImages function:*/
@@ -117,11 +117,19 @@ function initComparisons() {
               }
               function slideFinish(img) {
                 /*the slider is no longer clicked:*/
+<<<<<<< HEAD
                 let firstSquare = document.getElementsByClassName("img-comp-container")[0];
                 let newwidth;
                 firstSquare.outerHTML.width = newwidth;
                 //firstSquare.img.offsetWidth;
                 console.log(newwidth);
+=======
+                const percent = (img.offsetWidth/img.parentElement.offsetWidth) * 100
+                $timeout(() => {
+                  $ctrl[className] = `${Math.round(percent)}`
+                });
+                console.log($ctrl[className], $ctrl);
+>>>>>>> 6cabbd73aa0f8a872598ee116410b8118efadd88
                 clicked = 0;
               }
               function slideMove(e) {
@@ -155,6 +163,12 @@ function initComparisons() {
               }
               
             }
-          }initComparisons();
+          }
+
+          $ctrl.$onInit = function(){
+            initComparisons('daytime');
+            initComparisons('temperature');
+          }
+
         });
 }
