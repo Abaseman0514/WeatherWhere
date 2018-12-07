@@ -1,10 +1,10 @@
 "use strict";{
     angular.module('app')
-    .controller('postformController', function(){
+    .controller('postformController', function(weatherService){
         const $ctrl = this;
         $ctrl.addPost = function(){
-            $ctrl.onSubmit({title: $ctrl.textTitle, thought: $ctrl.textThought});
-            console.log('test')
+            weatherService.boardMessages.push({name: $ctrl.textName, location: $ctrl.textLocation, message: $ctrl.textMessage});
+            
         };
     });
     }

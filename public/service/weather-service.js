@@ -5,6 +5,18 @@
             service.weatherData = [];
             service.userdaypref = null;
             service.usertemppref = null;
+            service.boardMessages = [
+                {name: 'Devin Scillian', 
+                location: 'Detroit',
+                message: 'Roads are icy today.'}, 
+                {name: 'Kim Gill',
+                location: 'Detroit',
+                message: 'Make sure to bring hats and gloves'},
+                {name: 'Rhonda Walker',
+                location: 'Detroit',
+                message: 'First one to post here! '}, 
+
+            ];
             
             
             service.getWeather = function(){
