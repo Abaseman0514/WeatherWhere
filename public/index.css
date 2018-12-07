@@ -32,12 +32,18 @@ header {
 .like {
   text-align: center;
   font-size: 40px;
-  color: white;
+  text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+  color: rgb(163, 91, 196);
 }
 
 .prefs {
   width: 1000px;
   margin: 0 auto;
+}
+
+.explanationTemp .explanationDay {
+  text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+  color: rgb(163, 91, 196);
 }
 
 /* SLIDER */
