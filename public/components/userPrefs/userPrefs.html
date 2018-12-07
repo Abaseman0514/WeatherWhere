@@ -6,7 +6,7 @@
     <div class="slidecontainer">
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange" ng-model = "$ctrl.dayValue">
     </div> -->
-    <div>
+    <div class = "explanationDay">
       How much daylight do you like? (Adjust the image to show percentage of daylight preferred)  {{$ctrl.daytime}} &#37;
       </div>
       <div class="img-comp-container">
@@ -18,7 +18,7 @@
         </div>
       </div>
       
-      <div>
+      <div class = "explanationTemp>
          Do you like it hotter or colder?  (Adjust the below image to show what temperature you prefer.) {{$ctrl.temperature}} &#8457; 
          </div>
     <div class="img-comp-container">
@@ -35,6 +35,6 @@
     <p>Location: {{$ctrl.userData.timezone}}</p>
     <p>Temp:{{$ctrl.userData.currently.temperature}}</p>
   
-    <button id="submit" ng-click="$ctrl.user()">Submit your preferences</button>
+    <button id="submit" ng-click="$ctrl.user()" onclick="location.href= '#!/weather';">Submit your preferences</button>
     {{$ctrl.values}}
   </section>
