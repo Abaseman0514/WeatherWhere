@@ -6,7 +6,7 @@
 {{$ctrl.userData.timezone}}
 </h3>
 <div>
-Outside Temp: {{$ctrl.userData.currently.apparentTemperature}}
+Outside Temp: {{$ctrl.userData.currently.temperature}}
 <p class = "summary">Overview: {{$ctrl.userData.currently.summary}}</p>
 <p>Summary: {{$ctrl.userData.currently.summary}}</p>
 <p>Number of hours of day light: {{$ctrl.totalHours}}</p>
@@ -27,6 +27,7 @@ Outside Temp: {{$ctrl.userData.currently.apparentTemperature}}
 <p>User Prefs Day setting:{{$ctrl.userDay}}</p>
 <p>User Prefs Temp setting:{{$ctrl.userTemp}}</p>
 <h3>{{$ctrl.matchPic}}</h3>
+<h3 ng-if = "!$ctrl.matchPic">{{$ctrl.noMatch}}</h3>
 
 
 <form>
