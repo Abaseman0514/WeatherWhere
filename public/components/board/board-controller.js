@@ -1,18 +1,11 @@
 "use strict";{
     angular.module('app')
-    .controller('boardController', function(){
+    .controller('boardController', function(weatherService){
         
         const $ctrl = this;
         $ctrl.hide = true;
-        $ctrl.list= [
-                        {title: 'Devin Scillian', 
-                        thought: 'Roads are icy today.'}, 
-                        {title: 'Kim Gill',
-                        thought: 'Make sure to bring hats and gloves'},
-                        {title: 'Rhonda Walker',
-                        thought: 'First one to post here! '}, 
-
-                    ];
+        $ctrl.list = weatherService.boardMessages;
+       
 
         $ctrl.addText = function(){
                         $ctrl.hide = false;
@@ -21,7 +14,7 @@
                     };
                 
         $ctrl.addPost = function(post){
-            $ctrl.list.unshift(post);
+            weatherService.boardMessages.unshift(post);
             $ctrl.show = false;
             $ctrl.hide = true;
 

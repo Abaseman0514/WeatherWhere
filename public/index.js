@@ -11,6 +11,9 @@
                 .when('/social', {
                     template: '<social></social>'
                 })
+                .when('/future', {
+                    template: '<future></future>'
+                })
                 
                 .otherwise({
                     template: '<h1>404 Page Does Not Exist</h1>'
