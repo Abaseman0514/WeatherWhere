@@ -70,7 +70,7 @@
         ]
         
         for (const userInfo of dayTemp) {
-            if ($ctrl.userData.currently.apparentTemperature >= userInfo.temp) {
+            if ($ctrl.userData.currently.temperature >= userInfo.temp) {
                 $ctrl.wear = userInfo.clothing
                 $ctrl.actOne = userInfo.actOne
                 $ctrl.actTwo = userInfo.actTwo
@@ -93,31 +93,31 @@
 
                     //0 to 8 hour 0 to 100 temp
                    if($ctrl.userDay >= 0 && $ctrl.userDay <=33 && $ctrl.userTemp >=0 && $ctrl.userTemp <=20
-                        && $ctrl.userData.currently.apparentTemperature >= 0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >= 0 && $ctrl.userData.currently.temperature <=20 
                         && $ctrl.totalHours<=8
                         ){
                     $ctrl.matchPic ="This day matches your preferences with less than 20 temp and 8 hours of day light";
                         }
                     if($ctrl.userDay >= 0 && $ctrl.userDay <=33 && $ctrl.userTemp >=21 && $ctrl.userTemp <= 40
-                        && $ctrl.userData.currently.apparentTemperature >= 21 && $ctrl.userData.currently.apparentTemperature <=40 
+                        && $ctrl.userData.currently.temperature >= 21 && $ctrl.userData.currently.temperature <=40 
                         && $ctrl.totalHours<=8
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 40 temp and 8 hours of day light";
                         }
                     if($ctrl.userDay >= 0 && $ctrl.userDay <=33 && $ctrl.userTemp >=41 && $ctrl.userTemp <= 60
-                        && $ctrl.userData.currently.apparentTemperature >= 41 && $ctrl.userData.currently.apparentTemperature <=60 
+                        && $ctrl.userData.currently.temperature >= 41 && $ctrl.userData.currently.temperature <=60 
                         && $ctrl.totalHours<=8
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 60 temp and 8 hours of day light";
                         }
                     if($ctrl.userDay >= 0 && $ctrl.userDay <=33 && $ctrl.userTemp >=61 && $ctrl.userTemp <= 80
-                        && $ctrl.userData.currently.apparentTemperature >= 61 && $ctrl.userData.currently.apparentTemperature <=80 
+                        && $ctrl.userData.currently.temperature >= 61 && $ctrl.userData.currently.temperature <=80 
                     && $ctrl.totalHours<=8
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 80 temp and 8 hours of day light";
                         }
                     if($ctrl.userDay >= 0 && $ctrl.userDay <=33 && $ctrl.userTemp >=81 && $ctrl.userTemp <= 100
-                        && $ctrl.userData.currently.apparentTemperature >= 81 && $ctrl.userData.currently.apparentTemperature <=100 
+                        && $ctrl.userData.currently.temperature >= 81 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours<=8
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and 8 hours of day light";
@@ -125,31 +125,31 @@
 
                     //10 hour 0 to 100 temp
                     if($ctrl.userDay >= 34 && $ctrl.userDay <=42 && $ctrl.userTemp >=0 && $ctrl.userTemp <=20
-                        && $ctrl.userData.currently.apparentTemperature >=0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >=0 && $ctrl.userData.currently.temperature <=20 
                         && $ctrl.totalHours>=8 && $ctrl.totalHours<=10
                         ){
                        $ctrl.matchPic ="This day matches your preferences with less than 20 temp and around 10 hours of day light";
                         }
-                    if($ctrl.userDay >= 34 && $ctrl.userDay <=42 && $ctrl.userTemp >=21 && $ctrl.userTemp <= 40
-                        && $ctrl.userData.currently.apparentTemperature >=21 && $ctrl.userData.currently.apparentTemperature <=40 
+                    if($ctrl.userDay >= 34 && $ctrl.userDay <=42 && $ctrl.userTemp >=20.01 && $ctrl.userTemp <= 40
+                        && $ctrl.userData.currently.temperature >=20.01 && $ctrl.userData.currently.temperature <=40 
                         && $ctrl.totalHours>=8 && $ctrl.totalHours<=10
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 40 temp and around 10 hours of day light";
                         }
                     if($ctrl.userDay >= 34 && $ctrl.userDay <=42 && $ctrl.userTemp >=41 && $ctrl.userTemp <= 60
-                        && $ctrl.userData.currently.apparentTemperature >=41 && $ctrl.userData.currently.apparentTemperature <=60 
+                        && $ctrl.userData.currently.temperature >=40.01 && $ctrl.userData.currently.temperature <=60 
                         && $ctrl.totalHours>=8 && $ctrl.totalHours<=10
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 60 temp and around 10 hours of day light";
                         }
                     if($ctrl.userDay >= 34 && $ctrl.userDay <=42 && $ctrl.userTemp >=61 && $ctrl.userTemp <= 80
-                        && $ctrl.userData.currently.apparentTemperature >=61 && $ctrl.userData.currently.apparentTemperature <=100 
+                        && $ctrl.userData.currently.temperature >=60.01 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours>=8 && $ctrl.totalHours<=10
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 80 temp and around 10 hours of day light";
                         }
                     if($ctrl.userDay >= 34 && $ctrl.userDay <=42 && $ctrl.userTemp >=81 && $ctrl.userTemp <= 100
-                        && $ctrl.userData.currently.apparentTemperature >=81 && $ctrl.userData.currently.apparentTemperature <=100 
+                        && $ctrl.userData.currently.temperature >=80.01 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours>=8 && $ctrl.totalHours<=10
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and around 10 hours of day light";
@@ -157,31 +157,31 @@
 
                     //12 hour 0 to 100 temp
                     if($ctrl.userDay >= 43 && $ctrl.userDay <=50 && $ctrl.userTemp >=0 && $ctrl.userTemp <=20
-                        && $ctrl.userData.currently.apparentTemperature >=0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >=0 && $ctrl.userData.currently.temperature <=20 
                         && $ctrl.totalHours>=10 && $ctrl.totalHours<=12
                         ){
                     $ctrl.matchPic ="This day matches your preferences with less than 20 temp and around 12 hours of day light";
                         }
                     if($ctrl.userDay >= 43 && $ctrl.userDay <=50 && $ctrl.userTemp >=21 && $ctrl.userTemp <= 40
-                        && $ctrl.userData.currently.apparentTemperature >=21 && $ctrl.userData.currently.apparentTemperature <=40 
+                        && $ctrl.userData.currently.temperature >=20.01 && $ctrl.userData.currently.temperature <=40 
                         && $ctrl.totalHours>=10 && $ctrl.totalHours<=12
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 40 temp and around 12 hours of day light";
                         }
                     if($ctrl.userDay >= 43 && $ctrl.userDay <=50 && $ctrl.userTemp >=41 && $ctrl.userTemp <= 60
-                        && $ctrl.userData.currently.apparentTemperature >=41 && $ctrl.userData.currently.apparentTemperature <=60 
+                        && $ctrl.userData.currently.temperature >=40.01 && $ctrl.userData.currently.temperature <=60 
                         && $ctrl.totalHours>=10 && $ctrl.totalHours<=12
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 60 temp and around 12 hours of day light";
                         }
                     if($ctrl.userDay >= 43 && $ctrl.userDay <=50 && $ctrl.userTemp >=61 && $ctrl.userTemp <= 80
-                        && $ctrl.userData.currently.apparentTemperature >=61 && $ctrl.userData.currently.apparentTemperature <=80 
+                        && $ctrl.userData.currently.temperature >=60.01 && $ctrl.userData.currently.temperature <=80 
                         && $ctrl.totalHours>=10 && $ctrl.totalHours<=12
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 80 temp and around 12 hours of day light";
                         }
                     if($ctrl.userDay >= 43 && $ctrl.userDay <=50 && $ctrl.userTemp >=81 && $ctrl.userTemp <= 100
-                        && $ctrl.userData.currently.apparentTemperature >=81 && $ctrl.userData.currently.apparentTemperature <=100 
+                        && $ctrl.userData.currently.temperature >=80.01 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours>=10 && $ctrl.totalHours<=12
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and around 12 hours of day light";
@@ -189,31 +189,31 @@
 
                     //12 to 14 hour 0 to 100 temp
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=0 && $ctrl.userTemp <=20
-                        && $ctrl.userData.currently.apparentTemperature >=0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >=0 && $ctrl.userData.currently.temperature <=20 
                         && $ctrl.totalHours>=12 && $ctrl.totalHours<=14
                         ){
                     $ctrl.matchPic ="This day matches your preferences with less than 20 temp and around 14 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=21 && $ctrl.userTemp <= 40
-                        && $ctrl.userData.currently.apparentTemperature >=21 && $ctrl.userData.currently.apparentTemperature <=40
+                        && $ctrl.userData.currently.temperature >=20.01 && $ctrl.userData.currently.temperature <=40
                         && $ctrl.totalHours>=12 && $ctrl.totalHours<=14
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 40 temp and around 14 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=41 && $ctrl.userTemp <= 60
-                        && $ctrl.userData.currently.apparentTemperature >=41 && $ctrl.userData.currently.apparentTemperature <=60 
+                        && $ctrl.userData.currently.temperature >=40.01 && $ctrl.userData.currently.temperature <=60 
                         && $ctrl.totalHours>=12 && $ctrl.totalHours<=14
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 60 temp and around 14 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=61 && $ctrl.userTemp <= 80
-                        && $ctrl.userData.currently.apparentTemperature >=61 && $ctrl.userData.currently.apparentTemperature <=80 
+                        && $ctrl.userData.currently.temperature >=60.01 && $ctrl.userData.currently.temperature <=80 
                         && $ctrl.totalHours>=12 && $ctrl.totalHours<=14
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 80 temp and around 14 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=81 && $ctrl.userTemp <= 100
-                        && $ctrl.userData.currently.apparentTemperature >=81 && $ctrl.userData.currently.apparentTemperature <=100 
+                        && $ctrl.userData.currently.temperature >=80.01 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours>=12 && $ctrl.totalHours<=14
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and around 14 hours of day light";
@@ -221,31 +221,31 @@
 
                     //16 hour 0 to 100 temp
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=0 && $ctrl.userTemp <=20
-                        && $ctrl.userData.currently.apparentTemperature >=0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >=0 && $ctrl.userData.currently.temperature <=20 
                         && $ctrl.totalHours>=14 && $ctrl.totalHours<=16
                         ){
                     $ctrl.matchPic ="This day matches your preferences with less than 20 temp and around 16 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=21 && $ctrl.userTemp <= 40
-                        && $ctrl.userData.currently.apparentTemperature >=21 && $ctrl.userData.currently.apparentTemperature <=40 
+                        && $ctrl.userData.currently.temperature >=20.01 && $ctrl.userData.currently.temperature <=40 
                         && $ctrl.totalHours>=14 && $ctrl.totalHours<=16
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 40 temp and around 16 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=41 && $ctrl.userTemp <= 60
-                        && $ctrl.userData.currently.apparentTemperature >=41 && $ctrl.userData.currently.apparentTemperature <=60 
+                        && $ctrl.userData.currently.temperature >=40.01 && $ctrl.userData.currently.temperature <=60 
                         && $ctrl.totalHours>=14 && $ctrl.totalHours<=16
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 60 temp and around 16 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=61 && $ctrl.userTemp <= 80
-                        && $ctrl.userData.currently.apparentTemperature >=61 && $ctrl.userData.currently.apparentTemperature <=80 
+                        && $ctrl.userData.currently.temperature >=60.01 && $ctrl.userData.currently.temperature <=80 
                         && $ctrl.totalHours>=14 && $ctrl.totalHours<=16
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 80 temp and around 15 hours of day light";
                         }
                     if($ctrl.userDay >= 51 && $ctrl.userDay <=66 && $ctrl.userTemp >=81 && $ctrl.userTemp <= 100
-                        && $ctrl.userData.currently.apparentTemperature >=61 && $ctrl.userData.currently.apparentTemperature <=80 
+                        && $ctrl.userData.currently.temperature >=80.01 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours>=14 && $ctrl.totalHours<=16
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and around 16 hours of day light";
@@ -253,31 +253,31 @@
 
                     //24 hour 0 to 100 temp
                     if($ctrl.userDay >= 67 && $ctrl.userDay <=100 && $ctrl.userTemp >=0 && $ctrl.userTemp <=20 
-                        && $ctrl.userData.currently.apparentTemperature >= 0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >= 0 && $ctrl.userData.currently.temperature <=20 
                         && $ctrl.totalHours>=17
                         ){
                     $ctrl.matchPic ="This day matches your preferences with less than 20 temp and over 16 hours of day light";
                         }
                     if($ctrl.userDay >= 67 && $ctrl.userDay <=100 && $ctrl.userTemp >=21 && $ctrl.userTemp <= 40
-                        && $ctrl.userData.currently.apparentTemperature >= 0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <=40 
                         && $ctrl.totalHours>=17
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 40 temp and over 16 hours of day light";
                         }
                     if($ctrl.userDay >= 67 && $ctrl.userDay <=100 && $ctrl.userTemp >=41 && $ctrl.userTemp <= 60
-                        && $ctrl.userData.currently.apparentTemperature >= 0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <=60 
                         && $ctrl.totalHours>=17
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 60 temp and over 16 hours of day light";
                         }
                     if($ctrl.userDay >= 67 && $ctrl.userDay <=100 && $ctrl.userTemp >=61 && $ctrl.userTemp <= 80
-                        && $ctrl.userData.currently.apparentTemperature >= 0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <=80 
                         && $ctrl.totalHours>=17
                         ){
                         $ctrl.matchPic ="This day matches your preferences with less than 80 temp and over 16 hours of day light";
                         }
                     if($ctrl.userDay >= 67 && $ctrl.userDay <=100 && $ctrl.userTemp >=81 && $ctrl.userTemp <= 100
-                        && $ctrl.userData.currently.apparentTemperature >= 0 && $ctrl.userData.currently.apparentTemperature <=20 
+                        && $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <=100 
                         && $ctrl.totalHours>=17
                             ){
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and over 16 hours of day light";
