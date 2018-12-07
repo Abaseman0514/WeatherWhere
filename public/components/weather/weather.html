@@ -1,14 +1,14 @@
 <div class="weatherPage">
 
 <!-- <h1>WeatherWhere</h1> -->
-<div class = "results">
+<div class = "results" >
 <h3 class = "timezone">
 {{$ctrl.userData.timezone}}
 </h3>
+
 <div>
 Outside Temp: {{$ctrl.userData.currently.temperature}}
 <p class = "summary">Overview: {{$ctrl.userData.currently.summary}}</p>
-<p>Summary: {{$ctrl.userData.currently.summary}}</p>
 <p>Number of hours of day light: {{$ctrl.totalHours}}</p>
 </div>
 <div>
@@ -21,9 +21,6 @@ Outside Temp: {{$ctrl.userData.currently.temperature}}
    <p>{{$ctrl.actTwo}}</p>
    <p>{{$ctrl.actThree}}</p>
 </div>
-<button id="submit" ng-click="$ctrl.begDay()">Show times</button>
-<button id="submit" ng-click="$ctrl.match()">Show Preferences</button>
-<button id="submit" ng-click="$ctrl.user()">Show Activities and Clothing</button>
 <p>User Prefs Day setting:{{$ctrl.userDay}}</p>
 <p>User Prefs Temp setting:{{$ctrl.userTemp}}</p>
 <h3>{{$ctrl.matchPic}}</h3>

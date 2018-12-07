@@ -4,6 +4,9 @@
         const $ctrl = this;
         weatherService.getWeather().then(result => {
             $ctrl.userData = result
+            $ctrl.begDay();
+            $ctrl.user();
+            $ctrl.match();
         });
         
         $ctrl.userDay = weatherService.userdaypref;
@@ -317,6 +320,8 @@
                                            
              }
 
+
+            
         });
 
 }
