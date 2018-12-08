@@ -1,44 +1,9 @@
 <section ng-repeat="future in $ctrl.userData.daily.data">
-    {{future.summary}}
-    {{future.icon}}
+    <!-- {{future.summary}} -->
+    <canvas id="icon{{$index}}" width="50" height="50"></canvas>
     {{future.temperatureHigh}}
 </section>
-
-
-<!-- <div class="weatherPage"> -->
-
-<!-- <h1>WeatherWhere</h1> -->
-<!-- <div class = "results">
-<h3 class = "timezone">
-{{$ctrl.userData.timezone}}
-</h3>
 <div>
-Outside Temp: {{$ctrl.userData.currently.temperature}}
-<p class = "summary">Overview: {{$ctrl.userData.currently.summary}}</p>
-<p>Summary: {{$ctrl.userData.currently.summary}}</p>
-<p>Number of hours of day light: {{$ctrl.totalHours}}</p>
-</div>
-<div>
-<h3 class = "whatWear">What to wear today</h3>
-{{$ctrl.wear}}
-</div>
-<div>
-    <h3 class = "activity">Popular Activities</h3>
-   <p>{{$ctrl.actOne}}</p>
-   <p>{{$ctrl.actTwo}}</p>
-   <p>{{$ctrl.actThree}}</p>
-</div>
-<button id="submit" ng-click="$ctrl.begDay()">Show times</button>
-<button id="submit" ng-click="$ctrl.match()">Show Preferences</button>
-<button id="submit" ng-click="$ctrl.user()">Show Activities and Clothing</button>
-<p>User Prefs Day setting:{{$ctrl.userDay}}</p>
-<p>User Prefs Temp setting:{{$ctrl.userTemp}}</p>
-<h3>{{$ctrl.matchPic}}</h3>
-<h3 ng-if = "!$ctrl.matchPic">{{$ctrl.noMatch}}</h3>
 
 
-<form>
-    <input type = "button" ng-click = "$ctrl.getLocation();" value = "Get Location"/>
-  </form>
-
-</div> -->
+</div>
