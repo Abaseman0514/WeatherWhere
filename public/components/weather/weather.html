@@ -12,6 +12,11 @@ Outside Temp: {{$ctrl.userData.currently.temperature}}
 <p>Number of hours of day light: {{$ctrl.totalHours}}</p>
 </div>
 <div>
+  <input type="text" placeholder="Search new Location"
+  ng-model="$ctrl.search">
+  <button id="submit" ng-click="$ctrl.locationSearch($ctrl.search)">Submit Location</button>
+</div>
+<div>
 <h3 class = "whatWear">What to wear today</h3>
 {{$ctrl.wear}}
 </div>
@@ -28,7 +33,7 @@ Outside Temp: {{$ctrl.userData.currently.temperature}}
 
 
 <form>
-    <input type = "button" ng-click = "$ctrl.getLocation();" value = "Get Location"/>
+    <input type = "button" ng-click = "$ctrl.getCurrentLocation();" value = "Get Location"/>
   </form>
 
 </div>

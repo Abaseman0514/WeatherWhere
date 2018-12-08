@@ -8,6 +8,18 @@
             $ctrl.user();
             $ctrl.match();
         });
+        $ctrl.locationSearch = function(search){
+            weatherService.getLocation(search)
+                .then(results => weatherService.getWeather(results))
+                .then(newResult => {
+                    $ctrl.userData = newResult
+                    $ctrl.begDay();
+                    $ctrl.user();
+                    $ctrl.match();
+                });
+        }
+
+   
         
         $ctrl.userDay = weatherService.userdaypref;
         $ctrl.userTemp = weatherService.usertemppref;
@@ -294,7 +306,7 @@
 
             };
 
-              $ctrl.getLocation = function() {
+              $ctrl.getCurrentLocation = function() {
                   
                   if(navigator.geolocation) {
                       
