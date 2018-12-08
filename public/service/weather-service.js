@@ -3,6 +3,7 @@
         .service('weatherService', function ($http) {
             const service = this;
             service.weatherData = [];
+            service.locationData = [];
             service.userdaypref = null;
             service.usertemppref = null;
             service.boardMessages = [
@@ -17,13 +18,32 @@
                 message: 'First one to post here! '}, 
 
             ];
+            service.getLocation = function (search){ 
+                let apiKey = 'AIzaSyBdFcPIEFuPTF-m6mnU2JdDQNQthUGOTkY';
+                return $http.post('/proxy/https://maps.googleapis.com/maps/api/geocode/json?components=locality:'+ search +'&key=' + apiKey)
+                .then((response) => {
+                    service.locationData = response.results;
+                    console.log("This is the Location data", response);
+                    
+                    
+                    let lat = response.data.results[0].geometry.location.lat;
+                    let lng = response.data.results[0].geometry.location.lng;
+                    
+                    return {lat, lng};
+                });
+            }
             
             
-            service.getWeather = function(){
-    
-                return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/42.331429,-83.045753').then((responseData) => {
+            // service.getLocation().then(results => service.getWeather(results)).then(new =>{
+              
+            //     return service.weatherData
+            // });
+            service.getWeather = function({lat, lng} = {}){
+               let latitude = lat || 42.331429;
+               let longitude = lng || -83.045753;
+                return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
                         service.weatherData = responseData.data;
-                        console.log("This is the data", responseData.data);
+                        console.log("This is the Weather data", responseData.data);
                         
                         return service.weatherData;
 

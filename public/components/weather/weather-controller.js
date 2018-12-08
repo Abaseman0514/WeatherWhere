@@ -8,6 +8,18 @@
             $ctrl.user();
             $ctrl.match();
         });
+        $ctrl.locationSearch = function(search){
+            weatherService.getLocation(search)
+                .then(results => weatherService.getWeather(results))
+                .then(newResult => {
+                    $ctrl.userData = newResult
+                    $ctrl.begDay();
+                    $ctrl.user();
+                    $ctrl.match();
+                });
+        }
+
+   
         
         $ctrl.userDay = weatherService.userdaypref;
         $ctrl.userTemp = weatherService.usertemppref;
@@ -286,7 +298,7 @@
                         $ctrl.matchPic ="This day matches your preferences with less than 100 temp and over 16 hours of day light";
                             }
                             else{
-                                $ctrl.noMatch = "No Match"
+                                $ctrl.noMatch =  "images/sad.png";
                             }
 
                         
@@ -294,7 +306,7 @@
 
             };
 
-              $ctrl.getLocation = function() {
+              $ctrl.getCurrentLocation = function() {
                   
                   if(navigator.geolocation) {
                       
