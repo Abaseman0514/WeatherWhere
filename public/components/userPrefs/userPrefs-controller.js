@@ -27,6 +27,7 @@ function initComparisons(className) {
               /*create slider:*/
               slider = document.createElement("DIV");
               slider.setAttribute("class", "daylight");
+              slider.setAttribute("title", "Slide left or right");
               /*insert slider*/
               img.parentElement.insertBefore(slider, img);
               /*position the slider in the middle:*/

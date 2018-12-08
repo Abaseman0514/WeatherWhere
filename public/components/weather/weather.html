@@ -11,6 +11,11 @@ Outside Temp: {{$ctrl.userData.currently.temperature}}
 <p class = "summary">Overview: {{$ctrl.userData.currently.summary}}</p>
 <p>Number of hours of day light: {{$ctrl.totalHours}}</p>
 </div>
+<img src = "{{$ctrl.noMatch}}" alt = "Sad little blue bird" width ="200px" height = "300px">
+<img src = "images/happy.png" alt = "Grant Chirpus" width ="200px" height = "300px">
+
+
+
 <div>
   <input type="text" placeholder="Search new Location"
   ng-model="$ctrl.search">
@@ -36,4 +41,8 @@ Outside Temp: {{$ctrl.userData.currently.temperature}}
     <input type = "button" ng-click = "$ctrl.getCurrentLocation();" value = "Get Location"/>
   </form>
 
+</div>
+
+<div class="bubble">
+  <div class="box rotate"></div>
 </div>

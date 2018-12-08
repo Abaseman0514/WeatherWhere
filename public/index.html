@@ -7,30 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
       <title>WeatherWhere</title>
 </head>
 
 <body>
-        <header> <span class="title">
-            WeatherWhere 
-            <!-- <img src="images/header.jpg" alt="collage of weather images" class="header"> -->
-            </span>
-        </header>
+    <header> 
+    <span class="links">
         <a class="home" href="#!/">Home</a>
         <a class="weather" href="#!/weather">Weather</a>
         <a class="weather" href="#!/future">Weekly Weather</a>
         <a class="weather" href="#!/social">Message Board</a>
+    </span>    
+</header>
+    <span class="title">
+            WeatherWhere 
+            <!-- <img src="images/header.jpg" alt="collage of weather images" class="header"> -->
+            </span> 
+    
     <ng-view></ng-view>
 
-    <a class = "footer" href="https://darksky.net/poweredby/">“Powered by Dark Sky”</a>
+    <a class = "footer" href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
     
       </body>
       </html>
       
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular-route.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
+        
     <script src="index.js"></script>
 
     <script src = "components/board/board.js"></script>
