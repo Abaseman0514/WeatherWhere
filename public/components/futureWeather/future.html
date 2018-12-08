@@ -1,7 +1,14 @@
-<div class="weatherPage">
+<section ng-repeat="future in $ctrl.userData.daily.data">
+    {{future.summary}}
+    {{future.icon}}
+    {{future.temperatureHigh}}
+</section>
+
+
+<!-- <div class="weatherPage"> -->
 
 <!-- <h1>WeatherWhere</h1> -->
-<div class = "results">
+<!-- <div class = "results">
 <h3 class = "timezone">
 {{$ctrl.userData.timezone}}
 </h3>
@@ -34,4 +41,4 @@ Outside Temp: {{$ctrl.userData.currently.temperature}}
     <input type = "button" ng-click = "$ctrl.getLocation();" value = "Get Location"/>
   </form>
 
-</div>
+</div> -->
