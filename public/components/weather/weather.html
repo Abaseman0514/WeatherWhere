@@ -14,10 +14,16 @@
     <div class="showBlue" ng-if="!$ctrl.matchPic">
       <div class="speech-bubble-nomatch" ng-if="!$ctrl.matchPic">{{$ctrl.noMatchText}}</div>
       <img src="{{$ctrl.noMatch}}" alt="Sad little blue bird" width="200px" height="300px">
+      <b class="whatWearNo">
+          <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
+      </b>
     </div>
     <div class="showGrant" ng-if="$ctrl.matchPic">
       <div class="speech-bubble-match" ng-if="$ctrl.matchPic">{{$ctrl.matchPicText}}</div>
       <img src="{{$ctrl.matchPic}}" alt="Grant Chirpus" width="200px" height="300px">
+      <b class="whatWear">
+          <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
+      </b>
     </div>
 
     <div class="activity">
@@ -27,12 +33,7 @@
       <p>{{$ctrl.actThree}}</p>
     </div>
 
-    <div class="whatWear">
-      <h3 class="whatWearTitle">What to wear today:</h3>
-      {{$ctrl.wear}}
-    </div>
-
-    <div>
+      <div class = "locationInput">
       <input type="text" placeholder="Search new Location" ng-model="$ctrl.search">
       <button id="submit" ng-click="$ctrl.locationSearch($ctrl.search)">Submit Location</button>
     </div>

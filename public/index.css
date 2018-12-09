@@ -108,43 +108,43 @@ header {
   background-image: url(images/treeCropped.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .speech-bubble-match {
   font-family: 'Gamja Flower', cursive;
   background: #239b20;
-  border-radius: .4em;
+  border-radius: 12em;
   content: '';
   position: absolute;
   bottom: 0;
-  left: 20%;
+  left: 25%;
   width: 151px;
   height: 147px;
   border: 12px solid transparent;
   border-top-color: #239b20;
   border-bottom: 0;
-  border-left: 0;
+  border-left: 2;
   margin-left: -0px;
-  margin-bottom: -12px;
+  /* margin-bottom: -12px; */
 }
 
 .speech-bubble-nomatch {
   font-family: 'Gamja Flower', cursive;
   background: #9b2a20;
-  border-radius: .4em;
+  border-radius: 12em;
   content: '';
   position: absolute;
   bottom: 0;
-  left: 20%;
+  left: 25%;
   width: 151px;
   height: 107px;
   border: 12px solid transparent;
   border-top-color: #9b2a20;
   border-bottom: 0;
-  border-left: 0;
+  border-left: 2;
   margin-left: -0px;
-  margin-bottom: -12px;
+  /* margin-bottom: -12px; */
 }
 
 .results {
@@ -155,38 +155,43 @@ header {
 .activity {
     font-family: 'Gamja Flower', cursive;
     background: rgb(9, 9, 77);
-    border-radius: .4em;
+    border-radius: 12em;
     content: '';
     position: absolute;
     bottom: 0;
-    right: 20%;
-    width: 162px;
-    height: 234px;
+    right: 25%;
+    width: 200px;
+    height: 230px;
     border: 12px solid transparent;
     border-top-color: rgb(9, 9, 77);
     border-bottom: 0;
-    border-left: 0;
+    border-left: 2;
     margin-left: -0px;
-    margin-bottom: -12px;
+    /* margin-bottom: -12px; */
   }
 
-  .whatWear {
+  .whatWear,
+  .whatWearNo {
     font-family: 'Gamja Flower', cursive;
-    background-color: black;
+    background-color: rgb(102, 68, 68);
     /* background-image: url(images/clothing.png);
     background-repeat: no-repeat; */
-    color: rgb(221, 187, 38);
-    border-radius: .4em;
+    color: rgb(38, 133, 221);
+    border-radius: 12em;
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 20%;
-    width: 240px;
-    height: 234px;
-    border: 12px solid transparent;
-    border-bottom: 0;
-    border-left: 0;
+    left: 0;
+    top: 82%;
+   width: 100%;
+    /* right: 40%;
+    width: 350px; */
+    height: 60px;
     margin-left: -0px;
+    margin-block-start: 15em;
+    margin-block-end: 15em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
     /* margin-bottom: -12px; */
   }
 
@@ -216,6 +221,11 @@ header {
   text-align: center;
   color: white;
   font-family: 'Raleway', sans-serif;
+}
+
+.locationInput {
+  margin-top: 50px;
+  text-align: center;
 }
 
 #submitPrefs {
