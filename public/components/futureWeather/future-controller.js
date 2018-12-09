@@ -22,6 +22,7 @@
             var unixTimeBeg = $ctrl.userData.daily.data[0].time;
             var unixTimeEnd = $ctrl.userData.daily.data[0].time;
             
+        
             // Months array
             var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
             
@@ -38,8 +39,8 @@
             
             
             // Display date time in MM-dd-yyyy h:m:s format
-            var begDayTime = monthBeg+'-'+dayBeg;
-            var EndDayTime = monthEnd+'-'+dayEnd;
+            var begDayTime = monthBeg+''+dayBeg;
+            var EndDayTime = monthEnd+''+dayEnd;
         
             
             console.log(begDayTime);
