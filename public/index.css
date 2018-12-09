@@ -172,8 +172,10 @@ header {
 
   .whatWear {
     font-family: 'Gamja Flower', cursive;
-    background-image: url(images/clothing.png);
-    background-repeat: no-repeat;
+    background-color: black;
+    /* background-image: url(images/clothing.png);
+    background-repeat: no-repeat; */
+    color: rgb(221, 187, 38);
     border-radius: .4em;
     content: '';
     position: absolute;

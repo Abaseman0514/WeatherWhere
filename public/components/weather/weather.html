@@ -31,19 +31,19 @@
       <h3 class="whatWearTitle">What to wear today:</h3>
       {{$ctrl.wear}}
     </div>
-    
+
     <div>
       <input type="text" placeholder="Search new Location" ng-model="$ctrl.search">
       <button id="submit" ng-click="$ctrl.locationSearch($ctrl.search)">Submit Location</button>
     </div>
-    <p>User Prefs Day setting: {{$ctrl.userDay}}</p>
-    <p>User Prefs Temp setting: {{$ctrl.userTemp}}</p>
+    <!-- <p>User Prefs Day setting: {{$ctrl.userDay}}</p>
+    <p>User Prefs Temp setting: {{$ctrl.userTemp}}</p> -->
 
     <!-- <h3 ng-if = "!$ctrl.matchPic">{{$ctrl.noMatch}}</h3> -->
 
 
-    <form>
+    <!-- <form>
       <input type="button" ng-click="$ctrl.getCurrentLocation();" value="Get Location" />
-    </form>
+    </form> -->
 
   </div>
