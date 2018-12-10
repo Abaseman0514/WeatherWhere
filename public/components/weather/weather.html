@@ -11,15 +11,15 @@
       <p class="summary">Overview: {{$ctrl.userData.currently.summary}}</p>
       <p>Number of hours of day light: {{$ctrl.totalHours}}</p>
     </div>
-    <div class="showBlue" ng-if="!$ctrl.matchPic">
-      <div class="speech-bubble-nomatch" ng-if="!$ctrl.matchPic">{{$ctrl.noMatchText}}</div>
+    <!-- <div class="showBlue" ng-if="!$ctrl.matchPic">
+      <div class="{{$ctrl.userClass}}">{{$ctrl.noMatchText}}</div>
       <img src="{{$ctrl.noMatch}}" alt="Sad little blue bird" width="200px" height="300px">
       <b class="whatWearNo">
           <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
       </b>
-    </div>
-    <div class="showGrant" ng-if="$ctrl.matchPic">
-      <div class="speech-bubble-match" ng-if="$ctrl.matchPic">{{$ctrl.matchPicText}}</div>
+    </div> -->
+    <div class="showGrant">
+      <div class="{{$ctrl.userClass}}" >{{$ctrl.matchPicText}}</div>
       <img src="{{$ctrl.matchPic}}" alt="Grant Chirpus" width="200px" height="300px">
       <b class="whatWear">
           <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
