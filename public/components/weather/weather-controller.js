@@ -1,9 +1,15 @@
 "use strict"; {
     angular.module('app')
-        .controller('weatherController', function (weatherService) {
+        .controller('weatherController', function (weatherService, $timeout) {
             const $ctrl = this;
             weatherService.getWeather().then(result => {
-                $ctrl.userData = result
+                const skycons = new Skycons({ color: 'white' });
+                $ctrl.userData = result;
+                result.daily.data.forEach((day, index) => {
+                    $timeout(() => skycons.add(`icon${index}`, day.icon));
+                });
+                $ctrl.icons = skycons;
+                skycons.play();
                 $ctrl.begDay();
                 $ctrl.user();
                 $ctrl.match();
@@ -11,11 +17,18 @@
                 $ctrl.showWear = true;
 
             });
+          
             $ctrl.locationSearch = function (search) {
                 weatherService.getLocation(search)
                     .then(results => weatherService.getWeather(results))
                     .then(newResult => {
-                        $ctrl.userData = newResult
+                        const skycons = new Skycons({ color: 'white' });
+                        $ctrl.userData = newResult;
+                        newResult.daily.data.forEach((day, index) => {
+                            $timeout(() => skycons.add(`icon${index}`, day.icon));
+                        });
+                        $ctrl.icons = skycons;
+                        skycons.play();
                         $ctrl.begDay();
                         $ctrl.user();
                         $ctrl.match();
