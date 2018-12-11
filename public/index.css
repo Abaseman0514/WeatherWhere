@@ -107,8 +107,7 @@ header {
 .weatherPage {
   background-image: url(images/treeCropped.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
+  background-size: 100% 100%;
 }
 
 .speech-bubble-match {
@@ -147,6 +146,7 @@ header {
   /* margin-bottom: -12px; */
 }
 
+
 .results {
   text-align: center;
   padding-top: 3%;
@@ -167,7 +167,17 @@ header {
     border-bottom: 0;
     border-left: 2;
     margin-left: -0px;
+    
        /* margin-bottom: -12px; */
+  }
+
+  .activity.ng-enter {
+    transition: all 5s ease-in;
+    opacity: 0;
+  }
+
+  .activity.ng-enter.ng-enter-active {
+    opacity: 1;
   }
 
   #activity {
@@ -176,14 +186,13 @@ header {
     font-size: 18px;
   }
 
-  .actvityTitle {
+  .activityTitle {
     color: rgb(167, 8, 241);
     font-family: 'Gamja Flower', cursive, !important;
     font-size: 15px;
   }
 
-  .whatWear,
-  .whatWearNo {
+  .whatWear {
     font-family: 'Gamja Flower', cursive;
     background-color: rgb(102, 68, 68);
     /* background-image: url(images/clothing.png);
@@ -192,9 +201,9 @@ header {
     border-radius: 12em;
     content: '';
     position: absolute;
-    left: 0;
+    left: 30%;
     top: 82%;
-   width: 100%;
+   width: 40%;
     /* right: 40%;
     width: 350px; */
     height: 60px;
@@ -207,6 +216,16 @@ header {
     /* margin-bottom: -12px; */
   }
 
+  .whatWear.ng-enter {
+    transition: all 7s ease-in;
+    opacity: 0;
+  }
+
+  .whatWear.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+
+  
 
 /* .box {
   margin: 50px auto;
