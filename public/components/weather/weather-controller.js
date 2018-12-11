@@ -23,6 +23,7 @@
                         console.log($ctrl.userTemp);
                     });
             }
+            
             // weatherService.miamiWeather().then(result => {
             //     $ctrl.miamiData = result
             
@@ -49,7 +50,7 @@
             // });
 
 
-
+           
             $ctrl.userDay = weatherService.userdaypref;
             $ctrl.userTemp = weatherService.usertemppref;
             $ctrl.totalHours;

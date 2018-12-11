@@ -3,7 +3,7 @@
   <!-- <h1>WeatherWhere</h1> -->
   <div class="results">
     <h3 class="timezone">
-      {{$ctrl.userData.timezone}}
+      {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
 
     <div class = "tempOutside"> Outside Temperature: {{$ctrl.userData.currently.temperature}} &#8457; </div>

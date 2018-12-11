@@ -4,6 +4,7 @@
             const service = this;
             service.weatherData = [];
             service.locationData = [];
+            
             // service.miami = [];
             // service.seattle = [];
             // service.phoenix = [];
@@ -34,8 +35,9 @@
                     
                     let lat = response.data.results[0].geometry.location.lat;
                     let lng = response.data.results[0].geometry.location.lng;
+                    let address = response.data.results[0].formatted_address;
                     
-                    return {lat, lng};
+                    return {lat, lng, address};
                 });
             }
             
@@ -44,13 +46,14 @@
               
             //     return service.weatherData
             // });
-            service.getWeather = function({lat, lng} = {}){
+            service.getWeather = function({lat, lng, address} = {}){
                let latitude = lat || 42.331429;
                let longitude = lng || -83.045753;
             
 
                 return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
                         service.weatherData = responseData.data;
+                        service.weatherData.address = address;
                         console.log("This is the Weather data", responseData.data);
                         
                         return service.weatherData;
