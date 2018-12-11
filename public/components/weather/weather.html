@@ -1,22 +1,28 @@
 <div class="weatherPage">
 
   <div class="results">
+<<<<<<< HEAD
+    <!-- <h3 class="timezone">
+      {{$ctrl.userData.timezone}}
+    </h3> -->
+=======
     <h3 class="timezone">
       {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
+>>>>>>> f990ea99d2c8670bfd4df214aab2b5886994a9f3
 
-    <div class = "tempOutside"> Outside Temperature: {{$ctrl.userData.currently.temperature}} &#8457; </div>
-      <div class="summary">Overview: {{$ctrl.userData.currently.summary}}      
+    <div class = "tempOutside">{{$ctrl.userData.currently.temperature | number: 0}} &#8457; </div>
+      <div class="summary">{{$ctrl.userData.currently.summary}}      
     </div>
     
     <div class="showGrant">
-      <div class="{{$ctrl.userClass}}" >{{$ctrl.matchPicText}}</div>
-      <img src="{{$ctrl.matchPic}}" alt="Grant Chirpus" width="200px" height="300px">
-      <div class="whatWear" ng-if = "$ctrl.showWear">
-          <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
-      </div>
+      <img src="{{$ctrl.matchPic}}" width="150px" height="200px">
     </div>
-
+    <div class="{{$ctrl.userClass}}" >{{$ctrl.matchPicText}}</div>
+    
+    <div class="whatWear" ng-if = "$ctrl.showWear">
+        <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
+    </div>
     <div class="activity" ng-if = "$ctrl.showActivity">
       <h3 class="activityTitle" >Popular Activities</h3>
       <p id = "activity">{{$ctrl.actOne}}</p>

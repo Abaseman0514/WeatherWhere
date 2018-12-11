@@ -124,8 +124,9 @@ header {
   border-top-color: #239b20;
   border-bottom: 0;
   border-left: 2;
-  margin-left: -0px;
-  /* margin-bottom: -12px; */
+  margin-left: 79px;
+  box-shadow:  -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
+  margin-bottom: 132px;
 }
 
 .speech-bubble-nomatch {
@@ -137,20 +138,30 @@ header {
   bottom: 0;
   left: 25%;
   width: 151px;
-  height: 107px;
+  height: 145px;
   border: 12px solid transparent;
   border-top-color: #9b2a20;
-  border-bottom: 0;
-  border-left: 2;
-  margin-left: -0px;
-  /* margin-bottom: -12px; */
+  border-bottom: 0 ;
+  border-left: 2 ;
+  margin-left: 79px;
+  box-shadow:  -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
+  margin-bottom: 132px;
 }
 
 
 .results {
   text-align: center;
   padding-top: 3%;
+  position: relative;
 }
+
+/* .tempOutside {
+  float: left;
+}
+
+.summary {
+  float: right;
+} */
 
 .activity {
     font-family: 'Gamja Flower', cursive;
@@ -160,19 +171,19 @@ header {
     position: absolute;
     bottom: -100px;
     right: 25%;
-    width: 200px;
-    height: 230px;
+    width: 175px;
+    height: 168px;
     border: 12px solid transparent;
     border-top-color: rgb(9, 9, 77);
     border-bottom: 0;
     border-left: 2;
-    margin-left: -0px;
-    
-       /* margin-bottom: -12px; */
+    margin-right: 70px;
+    box-shadow: 8px -6px 5px 0px rgba(50, 50, 50, 0.75);
+    margin-bottom: 136px;
   }
 
   .activity.ng-enter {
-    transition: all 5s ease-in;
+    transition: all 3s ease-in;
     opacity: 0;
   }
 
@@ -194,19 +205,19 @@ header {
 
   .whatWear {
     font-family: 'Gamja Flower', cursive;
-    background-color: rgb(102, 68, 68);
+    background-color: rgb(26, 221, 169);
     /* background-image: url(images/clothing.png);
     background-repeat: no-repeat; */
     color: rgb(38, 133, 221);
     border-radius: 12em;
     content: '';
     position: absolute;
-    left: 30%;
-    top: 82%;
-   width: 40%;
+    left: 44%;
+    top: 58%;
+    width: 13%;
     /* right: 40%;
     width: 350px; */
-    height: 60px;
+    height: 82px;
     margin-left: -0px;
     margin-block-start: 15em;
     margin-block-end: 15em;
@@ -217,7 +228,7 @@ header {
   }
 
   .whatWear.ng-enter {
-    transition: all 7s ease-in;
+    transition: all 6s ease-in;
     opacity: 0;
   }
 
@@ -229,6 +240,7 @@ header {
   display: flex;
   flex-direction: row;
   align-content: center;
+  justify-content: center;
 }
 .future-weekly {
   display: flex;
