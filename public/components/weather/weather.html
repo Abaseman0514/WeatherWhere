@@ -1,9 +1,15 @@
 <div class="weatherPage">
 
   <div class="results">
+<<<<<<< HEAD
     <!-- <h3 class="timezone">
       {{$ctrl.userData.timezone}}
     </h3> -->
+=======
+    <h3 class="timezone">
+      {{$ctrl.userData.address || 'Detroit, MI, USA'}}
+    </h3>
+>>>>>>> f990ea99d2c8670bfd4df214aab2b5886994a9f3
 
     <div class = "tempOutside">{{$ctrl.userData.currently.temperature | number: 0}} &#8457; </div>
       <div class="summary">{{$ctrl.userData.currently.summary}}      
@@ -30,6 +36,12 @@
     </div>
   </div>
     
-    <div >
-      <future class = "weekly"></future>
+    <div class ="weekly">
+        <h3>Weekly Weather</h3>
+        <section class = "future-weekly" ng-repeat="future in $ctrl.userData.daily.data">
+            <!-- {{future.summary}} -->
+            {{ future.time*1000 | date : 'EEE d' }}
+            <canvas id="icon{{$index}}" width="50" height="50"></canvas>
+            {{future.temperatureHigh | number: 0}} &#8457;
+        </section>
     </div>
