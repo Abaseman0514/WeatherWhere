@@ -5,9 +5,9 @@
             weatherService.getWeather().then(result => {
               $ctrl.userData = result
             })
+ 
             
-     
-
+            
 function initComparisons(className) {
             var x, i;
             /*find all elements with an "overlay" class:*/
