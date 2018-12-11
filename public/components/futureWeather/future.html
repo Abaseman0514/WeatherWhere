@@ -1,7 +1,7 @@
 <h3>Weekly Weather</h3>
-<section ng-repeat="future in $ctrl.userData.daily.data">
+<section class = "future-weekly" ng-repeat="future in $ctrl.userData.daily.data">
     <!-- {{future.summary}} -->
-    <canvas id="icon{{$index}}" width="50" height="50"></canvas>
-    {{future.temperatureHigh}}
     {{ future.time*1000 | date : 'EEE d' }}
+    <canvas id="icon{{$index}}" width="50" height="50"></canvas>
+    {{future.temperatureHigh | number: 0}} &#8457;
 </section>
