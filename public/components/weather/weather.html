@@ -6,10 +6,8 @@
       {{$ctrl.userData.timezone}}
     </h3>
 
-    <div>
-      Outside Temp: {{$ctrl.userData.currently.temperature}}
-      <p class="summary">Overview: {{$ctrl.userData.currently.summary}}</p>
-      <p>Number of hours of day light: {{$ctrl.totalHours}}</p>
+    <div class = "tempOutside"> Outside Temperature: {{$ctrl.userData.currently.temperature}} &#8457; </div>
+      <div class="summary">Overview: {{$ctrl.userData.currently.summary}}      <!-- <p>Number of hours of day light: {{$ctrl.totalHours}}</p> -->
     </div>
     <!-- <div class="showBlue" ng-if="!$ctrl.matchPic">
       <div class="{{$ctrl.userClass}}">{{$ctrl.noMatchText}}</div>
@@ -21,16 +19,16 @@
     <div class="showGrant">
       <div class="{{$ctrl.userClass}}" >{{$ctrl.matchPicText}}</div>
       <img src="{{$ctrl.matchPic}}" alt="Grant Chirpus" width="200px" height="300px">
-      <b class="whatWear">
+      <div class="whatWear" ng-if = "$ctrl.showWear">
           <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
-      </b>
+      </div>
     </div>
 
-    <div class="activity">
-      <h3 class="activityTitle">Popular Activities</h3>
-      <p>{{$ctrl.actOne}}</p>
-      <p>{{$ctrl.actTwo}}</p>
-      <p>{{$ctrl.actThree}}</p>
+    <div class="activity" ng-if = "$ctrl.showActivity">
+      <h3 class="activityTitle" >Popular Activities</h3>
+      <p id = "activity">{{$ctrl.actOne}}</p>
+      <p id = "activity">{{$ctrl.actTwo}}</p>
+      <p id = "activity">{{$ctrl.actThree}}</p>
     </div>
 
       <div class = "locationInput">

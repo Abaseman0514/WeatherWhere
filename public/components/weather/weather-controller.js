@@ -7,6 +7,9 @@
                 $ctrl.begDay();
                 $ctrl.user();
                 $ctrl.match();
+                $ctrl.showActivity = true;
+                $ctrl.showWear = true;
+
             });
             $ctrl.locationSearch = function (search) {
                 weatherService.getLocation(search)
