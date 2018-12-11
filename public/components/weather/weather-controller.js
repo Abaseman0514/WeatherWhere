@@ -20,6 +20,30 @@
                         console.log($ctrl.userTemp);
                     });
             }
+            // weatherService.miamiWeather().then(result => {
+            //     $ctrl.miamiData = result
+            
+            // });
+            
+            // weatherService.seattleWeather().then(result => {
+            //     $ctrl.seattleData = result
+            
+            // });
+
+            // weatherService.phoenixWeather().then(result => {
+            //     $ctrl.phoenixData = result
+            
+            // });
+
+            // weatherService.dallasWeather().then(result => {
+            //     $ctrl.dallasData = result
+            
+            // });
+
+            // weatherService.nycWeather().then(result => {
+            //     $ctrl.nycData = result
+            
+            // });
 
 
 
