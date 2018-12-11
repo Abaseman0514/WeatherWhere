@@ -1,21 +1,14 @@
 <div class="weatherPage">
 
-  <!-- <h1>WeatherWhere</h1> -->
   <div class="results">
     <h3 class="timezone">
       {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
 
     <div class = "tempOutside"> Outside Temperature: {{$ctrl.userData.currently.temperature}} &#8457; </div>
-      <div class="summary">Overview: {{$ctrl.userData.currently.summary}}      <!-- <p>Number of hours of day light: {{$ctrl.totalHours}}</p> -->
+      <div class="summary">Overview: {{$ctrl.userData.currently.summary}}      
     </div>
-    <!-- <div class="showBlue" ng-if="!$ctrl.matchPic">
-      <div class="{{$ctrl.userClass}}">{{$ctrl.noMatchText}}</div>
-      <img src="{{$ctrl.noMatch}}" alt="Sad little blue bird" width="200px" height="300px">
-      <b class="whatWearNo">
-          <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
-      </b>
-    </div> -->
+    
     <div class="showGrant">
       <div class="{{$ctrl.userClass}}" >{{$ctrl.matchPicText}}</div>
       <img src="{{$ctrl.matchPic}}" alt="Grant Chirpus" width="200px" height="300px">
@@ -35,14 +28,8 @@
       <input type="text" placeholder="Search new Location" ng-model="$ctrl.search">
       <button id="submit" ng-click="$ctrl.locationSearch($ctrl.search)">Submit Location</button>
     </div>
-    <!-- <p>User Prefs Day setting: {{$ctrl.userDay}}</p>
-    <p>User Prefs Temp setting: {{$ctrl.userTemp}}</p> -->
-
-    <!-- <h3 ng-if = "!$ctrl.matchPic">{{$ctrl.noMatch}}</h3> -->
-
-
-    <!-- <form>
-      <input type="button" ng-click="$ctrl.getCurrentLocation();" value="Get Location" />
-    </form> -->
-
   </div>
+    
+    <div >
+      <future class = "weekly"></future>
+    </div>

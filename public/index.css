@@ -225,28 +225,15 @@ header {
     opacity: 1;
   }
 
-  
-
-/* .box {
-  margin: 50px auto;
-  background: #5FCF80;
-  width: 150px;
-  height: 150px;
+.weekly {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
 }
-
-.box:hover {
-  transform: rotate(360deg);
-  background: #9351A6;
-  border-radius: 50%;
+.future-weekly {
+  display: flex;
+  flex-direction: column;
 }
-
-.rotate {
-  transition: all 0.5s ease-in-out;
-}
-
-.rotate:hover {
-  transition: all 1s ease-in-out;
- */
 
 .mainPage {
   text-align: center;
