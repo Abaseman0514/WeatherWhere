@@ -15,23 +15,23 @@
                 $ctrl.match();
                 $ctrl.showActivity = true;
                 $ctrl.showWear = true;
-
+                
             });
-          
+            
             $ctrl.locationSearch = function (search) {
                 weatherService.getLocation(search)
-                    .then(results => weatherService.getWeather(results))
-                    .then(newResult => {
-                        const skycons = new Skycons({ color: 'white' });
-                        $ctrl.userData = newResult;
-                        newResult.daily.data.forEach((day, index) => {
-                            $timeout(() => skycons.add(`icon${index}`, day.icon));
-                        });
-                        $ctrl.icons = skycons;
-                        skycons.play();
-                        $ctrl.begDay();
-                        $ctrl.user();
-                        $ctrl.match();
+                .then(results => weatherService.getWeather(results))
+                .then(newResult => {
+                    const skycons = new Skycons({ color: 'white' });
+                    $ctrl.userData = newResult;
+                    newResult.daily.data.forEach((day, index) => {
+                        $timeout(() => skycons.add(`icon${index}`, day.icon));
+                    });
+                    $ctrl.icons = skycons;
+                    skycons.play();
+                    $ctrl.begDay();
+                    $ctrl.user();
+                    $ctrl.match();
                         console.log($ctrl.userDay);
                         console.log($ctrl.userTemp);
                     });
@@ -192,6 +192,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and 8 hours of daylight";
+                    $ctrl.recommendation = "Based on your preferences, check out A"
                 } else if ($ctrl.userDay >= 0 && $ctrl.userDay <= 33 && $ctrl.userTemp >= 21 && $ctrl.userTemp <= 40 &&
                     $ctrl.userData.currently.temperature >= 21 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours <= 8

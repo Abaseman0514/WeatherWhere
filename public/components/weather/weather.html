@@ -1,15 +1,9 @@
 <div class="weatherPage">
 
   <div class="results">
-<<<<<<< HEAD
-    <!-- <h3 class="timezone">
-      {{$ctrl.userData.timezone}}
-    </h3> -->
-=======
     <h3 class="timezone">
       {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
->>>>>>> f990ea99d2c8670bfd4df214aab2b5886994a9f3
 
     <div class = "tempOutside">{{$ctrl.userData.currently.temperature | number: 0}} &#8457; </div>
       <div class="summary">{{$ctrl.userData.currently.summary}}      
@@ -44,4 +38,7 @@
             <canvas id="icon{{$index}}" width="50" height="50"></canvas>
             {{future.temperatureHigh | number: 0}} &#8457;
         </section>
+
+        <button id="submitPrefs" onclick="location.href= '#!/';"><strong>Update your preferences</strong></button>
     </div>
+  
