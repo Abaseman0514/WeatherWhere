@@ -21,8 +21,9 @@ header {
   align-items: flex-end;
   margin-top: -96px;
 }
+
 .label {
-  display:flex;
+  display: flex;
   flex-direction: row;
   width: 70%;
   justify-content: center;
@@ -38,6 +39,7 @@ header {
   font-size: 30px;
   text-align: center;
 }
+
 .like {
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -119,8 +121,8 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 309px;
-  left: 20%;
+  bottom: 425px;
+  left: 22%;
   width: 151px;
   height: 147px;
   border: 12px solid transparent;
@@ -136,12 +138,12 @@ header {
 .speech-bubble-nomatch {
   font-family: 'Gamja Flower', cursive;
   background: #9b2a20;
-  color: navy;
+  color: rgb(40, 40, 125);
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 309px;
-  left: 20%;
+  bottom: 448px;
+  left: 24%;
   width: 122px;
   height: 106px;
   border: 12px solid transparent;
@@ -166,8 +168,8 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: -100px;
-  right: 25%;
+  bottom: 73px;
+  right: 21%;
   width: 175px;
   height: 168px;
   border: 12px solid transparent;
@@ -179,12 +181,13 @@ header {
   margin-bottom: 136px;
 }
 
-  .activity.ng-enter {
-    transition: all 6s ease-in;
-    opacity: 0;
-  }
 .activity.ng-enter {
-  transition: all 3s ease-in;
+  transition: all 4s ease-in;
+  opacity: 0;
+}
+
+.activity.ng-enter {
+  transition: all 1s ease-in;
   opacity: 0;
 }
 
@@ -208,11 +211,13 @@ header {
   font-family: 'Gamja Flower', cursive;
   background-color: rgb(26, 221, 169);
   color: rgb(38, 133, 221);
+  border: dotted 3px red;
   border-radius: 12em;
   content: '';
   position: absolute;
-  left: 44%;
-  top: 58%;
+  left: 61%;
+  top: 9%;
+  transform: rotate(5deg);
   width: 13%;
   height: 82px;
   margin-left: -0px;
@@ -222,48 +227,50 @@ header {
   text-align: center;
 }
 
-  
-  .whatWear.ng-enter {
-    transition: all 9s ease-in;
-    opacity: 0;
-  }
-  
-  .whatWear.ng-enter.ng-enter-active {
-    opacity: 1;
-  }
-  
-  .recommend {
-    font-family: 'Gamja Flower', cursive;
-    background-color: rgb(195, 161, 131);
-    color: rgb(46, 72, 138);
-    border-radius: 12em;
-    box-shadow:  -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
-    content: '';
-    position: absolute;
-    left: 30%;
-    top: 12%;
-    width: 13%;
-    height: 82px;
-    margin-left: -0px;
-    margin-block-start: 15em;
-    margin-block-end: 15em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: center;
-  }
 
-  .recommend.ng-enter {
-    transition: all 3s ease-in;
-    opacity: 0;
-  }
-  
-  .recommend.ng-enter.ng-enter-active {
-    opacity: 1;
-  }
+.whatWear.ng-enter {
+  transition: all 7s ease-in;
+  opacity: 0;
+}
 
-  .weekly {
-    display: flex;
-    flex-direction: row;
+.whatWear.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.recommend {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(195, 161, 131);
+  color: rgb(46, 72, 138);
+  border-radius: 12em;
+  /* box-shadow: -8px -6px 5px 0px rgba(50, 50, 50, 0.75); */
+  border: dashed 2px rgb(50, 154, 218);
+  content: '';
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  width: 15%;
+  height: 67px;
+  transform: rotate(-5deg);
+  margin-left: -0px;
+  margin-block-start: 15em;
+  margin-block-end: 15em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+
+.recommend.ng-enter {
+  transition: all 2s ease-in;
+  opacity: 0;
+}
+
+.recommend.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.weekly {
+  display: flex;
+  flex-direction: row;
   align-content: center;
   justify-content: center;
 }
@@ -303,6 +310,7 @@ header {
   header {
     height: 100px;
   }
+
   .title {
     font-size: 40px;
     margin-top: -50px;
@@ -319,6 +327,7 @@ header {
     width: 400px;
     margin: 0 auto;
   }
+
   .explanationTemp,
   .explanationDay {
     font-family: 'Raleway', sans-serif;
@@ -346,14 +355,14 @@ header {
     position: relative;
     height: 300px;
   }
-  
+
 
   .img-comp-img {
     position: absolute;
     width: auto;
     height: auto;
     overflow: hidden;
-  
+
 
   }
 
@@ -374,6 +383,7 @@ header {
     opacity: 0.8;
     border-radius: 50%;
   }
+
   .weatherPage {
     background-image: url(images/treeCropped.jpg);
     background-repeat: no-repeat;
@@ -544,14 +554,15 @@ header {
   }
 
 
- @media only screen and (max-width: 480px) {
-   
-  .title {
-     font-size: 35px;
-   }
-  #submitPrefs {
-    background-color: rgb(183, 112, 206);
-    font-size: 18px;
+  @media only screen and (max-width: 480px) {
+
+    .title {
+      font-size: 35px;
+    }
+
+    #submitPrefs {
+      background-color: rgb(183, 112, 206);
+      font-size: 18px;
+    }
   }
-}  
 }
