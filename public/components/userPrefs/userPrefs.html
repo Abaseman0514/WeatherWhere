@@ -1,38 +1,38 @@
 <section class="prefs">
-   
+
   <h1 class="like">How do you like it?</h1>
 
-    <div class = "explanationDay"><strong>
-      How much daylight do you like?  </strong> (Slide circle)</div>
-            <div class="img-comp-container">
-        <div class="img-comp-img">
-          <img src="images/star.jpg">
-        </div>
-        <div class="img-comp-img img-comp-overlay daytime">
-          <img src="images/sky.jpg">
-        </div>
-      </div>
-      <p class="userPrefDay"> YOU PREFER: {{$ctrl.daytime}} &#37 daylight </p>
-      
-      <div class = "explanationTemp"><strong>
-         Do you like it hotter or colder? (Slide circle) </strong> </div>
-         
-    <div class="img-comp-container">
-      <div class="img-comp-img">
-        <img src="images/cold.jpg">
-      </div>
-      <div class="img-comp-img img-comp-overlay temperature">
-        <img src="images/hot.jpg">
-      </div>
-    </section>
-    <p class="userPrefTemp"> YOU PREFER: {{$ctrl.temperature}}  &#8457; </p>
+  <div class="explanationDay"><strong>
+      How much daylight do you like? </strong> (Slide circle)</div>
+  <div class="img-comp-container">
+    <div class="img-comp-img">
+      <img src="images/star.jpg">
+    </div>
+    <div class="img-comp-img img-comp-overlay daytime">
+      <img src="images/sky.jpg">
+    </div>
+  </div>
+  <p class="userPrefDay"> YOU PREFER: {{$ctrl.daytime}} &#37 daylight </p>
+
+  <div class="explanationTemp"><strong>
+      Do you like it hotter or colder? (Slide circle) </strong> </div>
+
+  <div class="img-comp-container">
+    <div class="img-comp-img">
+      <img src="images/cold.jpg">
+    </div>
+    <div class="img-comp-img img-comp-overlay temperature">
+      <img src="images/hot.jpg">
+    </div>
+</section>
+<p class="userPrefTemp"> YOU PREFER: {{$ctrl.temperature}} &#8457; </p>
 
 
-    <section class = "mainPage">
-    
-    <p>Current Timezone: {{$ctrl.userData.timezone}}</p>
-    <p>Current Location Temperature: {{$ctrl.userData.currently.temperature}} &#8457; </p>
-  
-    <button id="submitPrefs" onclick="location.href= '#!/weather';"><strong>Submit your preferences</strong></button>
-    {{$ctrl.values}}
-  </section>
+<section class="mainPage">
+
+  <p>Current Timezone: {{$ctrl.userData.timezone}}</p>
+  <p>Current Location Temperature: {{$ctrl.userData.currently.temperature | number: 0}} &#8457; </p>
+
+  <button id="submitPrefs" onclick="location.href= '#!/weather';"><strong>Submit your preferences</strong></button>
+  {{$ctrl.values}}
+</section>

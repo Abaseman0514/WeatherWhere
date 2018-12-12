@@ -1,6 +1,6 @@
 body {
   background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
-  color: rgb(80, 113, 221);
+  /* color: rgb(80, 113, 221); */
 }
 
 header {
@@ -14,7 +14,7 @@ header {
   display: flex;
   height: 100%;
   font-family: 'Courgette', cursive;
-  font-size: 90px;
+  font-size: 75px;
   text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
   color: rgb(163, 91, 196);
   justify-content: flex-end;
@@ -22,17 +22,35 @@ header {
   margin-top: -96px;
 }
 
+.label {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  padding-top: 9%;
+  margin-left: 13%;
+  justify-content: space-around;
+}
+
+.timezone {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
 .like {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   font-size: 50px;
-  color: rgb(80, 113, 221);
+  color: rgb(84, 115, 218);
   text-decoration-line: underline;
-  text-shadow: -3px -1px 5px rgba(229, 220, 236, 0.87);
+  text-shadow: -3px -1px 5px rgba(114, 85, 136, 0.87);
 }
 
 .prefs {
-  width: 600px;
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -40,7 +58,7 @@ header {
 .explanationDay {
   font-family: 'Raleway', sans-serif;
   text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
-  color: rgb(186, 64, 243);
+  color: rgb(181, 154, 194);
   text-align: center;
   font-size: 20px;
 }
@@ -60,7 +78,7 @@ header {
 
 .img-comp-container {
   position: relative;
-  height: 300px;
+  height: 500px;
 
   /*should be the same height as the images*/
 }
@@ -75,8 +93,8 @@ header {
 
 .img-comp-img img {
   display: block;
-  width: 600px;
-  height: 300px;
+  width: 800px;
+  height: 500px;
   /* vertical-align: middle; */
 }
 
@@ -103,12 +121,13 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 25%;
+  bottom: 425px;
+  left: 22%;
   width: 151px;
   height: 147px;
   border: 12px solid transparent;
   border-top-color: #239b20;
+  color: navy;
   border-bottom: 0;
   border-left: 2;
   margin-left: 79px;
@@ -119,13 +138,14 @@ header {
 .speech-bubble-nomatch {
   font-family: 'Gamja Flower', cursive;
   background: #9b2a20;
+  color: rgb(40, 40, 125);
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 25%;
-  width: 151px;
-  height: 145px;
+  bottom: 448px;
+  left: 24%;
+  width: 122px;
+  height: 106px;
   border: 12px solid transparent;
   border-top-color: #9b2a20;
   border-bottom: 0;
@@ -138,17 +158,9 @@ header {
 
 .results {
   text-align: center;
-  padding-top: 3%;
+  padding-top: 34%;
   position: relative;
 }
-
-/* .tempOutside {
-  float: left;
-}
-
-.summary {
-  float: right;
-} */
 
 .activity {
   font-family: 'Gamja Flower', cursive;
@@ -156,8 +168,8 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: -100px;
-  right: 25%;
+  bottom: 73px;
+  right: 21%;
   width: 175px;
   height: 168px;
   border: 12px solid transparent;
@@ -169,12 +181,13 @@ header {
   margin-bottom: 136px;
 }
 
-  .activity.ng-enter {
-    transition: all 6s ease-in;
-    opacity: 0;
-  }
 .activity.ng-enter {
-  transition: all 3s ease-in;
+  transition: all 4s ease-in;
+  opacity: 0;
+}
+
+.activity.ng-enter {
+  transition: all 1s ease-in;
   opacity: 0;
 }
 
@@ -197,69 +210,67 @@ header {
 .whatWear {
   font-family: 'Gamja Flower', cursive;
   background-color: rgb(26, 221, 169);
-  /* background-image: url(images/clothing.png);
-    background-repeat: no-repeat; */
   color: rgb(38, 133, 221);
+  border: dotted 3px red;
   border-radius: 12em;
   content: '';
   position: absolute;
-  left: 44%;
-  top: 58%;
+  left: 61%;
+  top: 9%;
+  transform: rotate(5deg);
   width: 13%;
-  /* right: 40%;
-    width: 350px; */
   height: 82px;
   margin-left: -0px;
   margin-block-start: 2em;
-  /* margin-block-end: 15em; */
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   text-align: center;
-  /* margin-bottom: -12px; */
 }
 
-  
-  .whatWear.ng-enter {
-    transition: all 9s ease-in;
-    opacity: 0;
-  }
-  
-  .whatWear.ng-enter.ng-enter-active {
-    opacity: 1;
-  }
-  
-  .recommend {
-    font-family: 'Gamja Flower', cursive;
-    background-color: rgb(195, 161, 131);
-    color: rgb(46, 72, 138);
-    border-radius: 12em;
-    box-shadow:  -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
-    content: '';
-    position: absolute;
-    left: 30%;
-    top: 12%;
-    width: 13%;
-    height: 82px;
-    margin-left: -0px;
-    margin-block-start: 15em;
-    margin-block-end: 15em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: center;
-  }
 
-  .recommend.ng-enter {
-    transition: all 3s ease-in;
-    opacity: 0;
-  }
-  
-  .recommend.ng-enter.ng-enter-active {
-    opacity: 1;
-  }
+.whatWear.ng-enter {
+  transition: all 7s ease-in;
+  opacity: 0;
+}
 
-  .weekly {
-    display: flex;
-    flex-direction: row;
+.whatWear.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.recommend {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(195, 161, 131);
+  color: rgb(46, 72, 138);
+  border-radius: 12em;
+  /* box-shadow: -8px -6px 5px 0px rgba(50, 50, 50, 0.75); */
+  border: dashed 2px rgb(50, 154, 218);
+  content: '';
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  width: 15%;
+  height: 67px;
+  transform: rotate(-5deg);
+  margin-left: -0px;
+  margin-block-start: 15em;
+  margin-block-end: 15em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+
+.recommend.ng-enter {
+  transition: all 2s ease-in;
+  opacity: 0;
+}
+
+.recommend.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.weekly {
+  display: flex;
+  flex-direction: row;
   align-content: center;
   justify-content: center;
 }
@@ -295,57 +306,42 @@ header {
 
 /* tablets */
 @media only screen and (max-width: 768px) {
-  body {
-    background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
-    color: rgb(80, 113, 221);
-  }
 
   header {
-    background-image: url(images/header.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 200px;
+    height: 100px;
   }
 
   .title {
-    display: flex;
-    height: 100%;
-    font-family: 'Courgette', cursive;
-    font-size: 90px;
-    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
-    color: rgb(163, 91, 196);
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: -96px;
+    font-size: 40px;
+    margin-top: -50px;
   }
 
   .like {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    font-size: 50px;
-    color: rgb(80, 113, 221);
+    font-size: 30px;
+    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+    color: rgb(181, 154, 194);
     text-decoration-line: underline;
-    text-shadow: -3px -1px 5px rgba(229, 220, 236, 0.87);
   }
 
   .prefs {
-    width: 600px;
+    width: 400px;
     margin: 0 auto;
   }
 
   .explanationTemp,
   .explanationDay {
     font-family: 'Raleway', sans-serif;
-    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
-    color: rgb(186, 64, 243);
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    color: rgb(159, 177, 235);
+    text-shadow: -3px -1px 5px rgba(114, 85, 136, 0.87);
   }
 
   .userPrefDay,
   .userPrefTemp {
     font-family: 'Raleway', sans-serif;
-    color: rgb(80, 113, 221);
+    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+    color: rgb(181, 154, 194);
     text-align: center;
     font-size: 25px;
   }
@@ -358,9 +354,8 @@ header {
   .img-comp-container {
     position: relative;
     height: 300px;
-
-    /*should be the same height as the images*/
   }
+
 
   .img-comp-img {
     position: absolute;
@@ -368,11 +363,12 @@ header {
     height: auto;
     overflow: hidden;
 
+
   }
 
   .img-comp-img img {
     display: block;
-    width: 600px;
+    width: 400px;
     height: 300px;
     /* vertical-align: middle; */
   }
@@ -558,6 +554,15 @@ header {
   }
 
 
-  /* @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 480px) {
 
-}  */}
+    .title {
+      font-size: 35px;
+    }
+
+    #submitPrefs {
+      background-color: rgb(183, 112, 206);
+      font-size: 18px;
+    }
+  }
+}
