@@ -1,7 +1,7 @@
 <div class="weatherPage">
 
   <div class="results">
-    <h3 class="timezone">
+        <h3 class="timezone">
       {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
 
@@ -17,11 +17,14 @@
     <div class="whatWear" ng-if="$ctrl.showWear">
       <p class="whatWearTitle">What to wear today: {{$ctrl.wear}}</p>
     </div>
-    <div class="activity" ng-if="$ctrl.showActivity">
-      <h3 class="activityTitle">Popular Activities</h3>
-      <p id="activity">{{$ctrl.actOne}}</p>
-      <p id="activity">{{$ctrl.actTwo}}</p>
-      <p id="activity">{{$ctrl.actThree}}</p>
+    <div class = "recommend" ng-if = "$ctrl.showRecommend">
+      {{$ctrl.recommendation}}
+    </div>
+    <div class="activity" ng-if = "$ctrl.showActivity">
+      <h3 class="activityTitle" >Popular Activities</h3>
+      <p id = "activity">{{$ctrl.actOne}}</p>
+      <p id = "activity">{{$ctrl.actTwo}}</p>
+      <p id = "activity">{{$ctrl.actThree}}</p>
     </div>
 
     <div class="locationInput">
@@ -33,7 +36,6 @@
     <div class ="weekly">
         <h3>Weekly Weather</h3>
         <section class = "future-weekly" ng-repeat="future in $ctrl.userData.daily.data">
-            <!-- {{future.summary}} -->
             {{ future.time*1000 | date : 'EEE d' }}
             <canvas id="icon{{$index}}" width="50" height="50"></canvas>
             {{future.temperatureHigh | number: 0}} &#8457;

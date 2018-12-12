@@ -5,26 +5,10 @@
             service.weatherData = [];
             service.locationData = [];
             
-            // service.miami = [];
-            // service.seattle = [];
-            // service.phoenix = [];
-            // service.dallas = [];
-            // service.nyc = [];
 
             service.userdaypref = null;
             service.usertemppref = null;
-            service.boardMessages = [
-                {name: 'Devin Scillian', 
-                location: 'Detroit',
-                message: 'Roads are icy today.'}, 
-                {name: 'Kim Gill',
-                location: 'Detroit',
-                message: 'Make sure to bring hats and gloves'},
-                {name: 'Rhonda Walker',
-                location: 'Detroit',
-                message: 'First one to post here! '}, 
-
-            ];
+          
             service.getLocation = function (search){ 
                 let apiKey = 'AIzaSyBdFcPIEFuPTF-m6mnU2JdDQNQthUGOTkY';
                 return $http.post('/proxy/https://maps.googleapis.com/maps/api/geocode/json?components=locality:'+ search +'&key=' + apiKey)
@@ -60,67 +44,6 @@
 
                     });
             }
-
-            // service.miamiWeather = function(){
-            //     let latitude = 25.775084;
-            //     let longitude =  -80.194702;
-            //      return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
-            //              service.miami = responseData.data;
-            //              console.log("This is Miami Weather data", responseData.data);
-                         
-            //              return service.miami;
- 
-            //          }).then(result => service.miami = result);
-            //  }
-
-            //  service.miamiWeather();
-
-            //  service.seattleWeather = function(){
-            //     let latitude = 47.603229;
-            //     let longitude = -122.33028;
-            //      return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
-            //              service.seattle = responseData.data;
-            //              console.log("This is Seattle Weather data", responseData.data);
-                         
-            //              return service.seattle;
- 
-            //          });
-            //  }
-
-            //  service.phoenixWeather = function(){
-            //     let latitude = 33.448204;
-            //     let longitude = -112.072585;
-            //      return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
-            //              service.phoenix = responseData.data;
-            //              console.log("This is Phoenix Weather data", responseData.data);
-                         
-            //              return service.phoenix;
- 
-            //          });
-            //  }
-            //  service.dallasWeather = function(){
-            //     let latitude = 32.777977;
-            //     let longitude = -96.796215;
-            //      return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
-            //              service.dallas = responseData.data;
-            //              console.log("This is dallas Weather data", responseData.data);
-                         
-            //              return service.dallas;
- 
-            //          });
-            //  }
-
-            //  service.nycWeather = function(){
-            //     let latitude = 40.713054;
-            //     let longitude = -73.935242;
-            //      return $http.get('/proxy/https://api.darksky.net/forecast/33bfadcb23406507fb40ff261ed9828c/'+ latitude + ',' + longitude).then((responseData) => {
-            //              service.nyc = responseData.data;
-            //              console.log("This is NYC Weather data", responseData.data);
-                         
-            //              return service.nyc;
- 
-            //          });
-            //  }
              
         });
 

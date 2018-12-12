@@ -161,6 +161,10 @@ header {
   margin-bottom: 136px;
 }
 
+  .activity.ng-enter {
+    transition: all 6s ease-in;
+    opacity: 0;
+  }
 .activity.ng-enter {
   transition: all 3s ease-in;
   opacity: 0;
@@ -200,18 +204,48 @@ header {
   text-align: center;
 }
 
-.whatWear.ng-enter {
-  transition: all 6s ease-in;
-  opacity: 0;
-}
+  
+  .whatWear.ng-enter {
+    transition: all 9s ease-in;
+    opacity: 0;
+  }
+  
+  .whatWear.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+  
+  .recommend {
+    font-family: 'Gamja Flower', cursive;
+    background-color: rgb(195, 161, 131);
+    color: rgb(46, 72, 138);
+    border-radius: 12em;
+    box-shadow:  -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
+    content: '';
+    position: absolute;
+    left: 30%;
+    top: 12%;
+    width: 13%;
+    height: 82px;
+    margin-left: -0px;
+    margin-block-start: 15em;
+    margin-block-end: 15em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+  }
 
-.whatWear.ng-enter.ng-enter-active {
-  opacity: 1;
-}
+  .recommend.ng-enter {
+    transition: all 3s ease-in;
+    opacity: 0;
+  }
+  
+  .recommend.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
 
-.weekly {
-  display: flex;
-  flex-direction: row;
+  .weekly {
+    display: flex;
+    flex-direction: row;
   align-content: center;
   justify-content: center;
 }
