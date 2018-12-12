@@ -2,10 +2,7 @@
     angular.module('app')
         .service('weatherService', function ($http) {
             const service = this;
-            service.weatherData = [];
-            service.locationData = [];
-            
-
+           
             service.userdaypref = null;
             service.usertemppref = null;
           
