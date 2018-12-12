@@ -11,8 +11,10 @@ app.use('/proxy', (req, res) => {
     let url = req.path.substring(1);
     const params = req.query;
     const method = req.method.toLowerCase();
-    url = params ?  `${url}?${qs.unescape(qs.stringify(params))}`: url;
-    axios[method](url, { params }).then(result => {
+    url = params ? `${url}?${qs.unescape(qs.stringify(params))}` : url;
+    axios[method](url, {
+        params
+    }).then(result => {
         res.status(result.status).json(result.data);
     });
 
