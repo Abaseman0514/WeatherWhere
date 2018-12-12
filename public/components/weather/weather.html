@@ -5,26 +5,26 @@
       {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
 
-    <div class = "tempOutside">{{$ctrl.userData.currently.temperature | number: 0}} &#8457; </div>
-      <div class="summary">{{$ctrl.userData.currently.summary}}      
+    <div class="tempOutside">{{$ctrl.userData.currently.temperature | number: 0}} &#8457; </div>
+    <div class="summary">{{$ctrl.userData.currently.summary}}
     </div>
-    
+
     <div class="showGrant">
       <img src="{{$ctrl.matchPic}}" width="150px" height="200px">
     </div>
-    <div class="{{$ctrl.userClass}}" >{{$ctrl.matchPicText}}</div>
-    
-    <div class="whatWear" ng-if = "$ctrl.showWear">
-        <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
+    <div class="{{$ctrl.userClass}}">{{$ctrl.matchPicText}}</div>
+
+    <div class="whatWear" ng-if="$ctrl.showWear">
+      <p class="whatWearTitle">What to wear today: {{$ctrl.wear}}</p>
     </div>
-    <div class="activity" ng-if = "$ctrl.showActivity">
-      <h3 class="activityTitle" >Popular Activities</h3>
-      <p id = "activity">{{$ctrl.actOne}}</p>
-      <p id = "activity">{{$ctrl.actTwo}}</p>
-      <p id = "activity">{{$ctrl.actThree}}</p>
+    <div class="activity" ng-if="$ctrl.showActivity">
+      <h3 class="activityTitle">Popular Activities</h3>
+      <p id="activity">{{$ctrl.actOne}}</p>
+      <p id="activity">{{$ctrl.actTwo}}</p>
+      <p id="activity">{{$ctrl.actThree}}</p>
     </div>
 
-      <div class = "locationInput">
+    <div class="locationInput">
       <input type="text" placeholder="Search new Location" ng-model="$ctrl.search">
       <button id="submit" ng-click="$ctrl.locationSearch($ctrl.search)">Submit Location</button>
     </div>
