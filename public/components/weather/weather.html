@@ -1,7 +1,7 @@
 <div class="weatherPage">
 
   <div class="results">
-    <h3 class="timezone">
+        <h3 class="timezone">
       {{$ctrl.userData.address || 'Detroit, MI, USA'}}
     </h3>
 
@@ -16,6 +16,9 @@
     
     <div class="whatWear" ng-if = "$ctrl.showWear">
         <h3 class="whatWearTitle">What to wear today: {{$ctrl.wear}}</h3>
+    </div>
+    <div class = "recommend" ng-if = "$ctrl.showRecommend">
+      {{$ctrl.recommendation}}
     </div>
     <div class="activity" ng-if = "$ctrl.showActivity">
       <h3 class="activityTitle" >Popular Activities</h3>

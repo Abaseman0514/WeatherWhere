@@ -13,8 +13,10 @@
                 $ctrl.begDay();
                 $ctrl.user();
                 $ctrl.match();
+                $ctrl.recommend();
                 $ctrl.showActivity = true;
                 $ctrl.showWear = true;
+                $ctrl.showRecommend = true;
                 
             });
             
@@ -32,6 +34,7 @@
                     $ctrl.begDay();
                     $ctrl.user();
                     $ctrl.match();
+                    $ctrl.recommend();
                         console.log($ctrl.userDay);
                         console.log($ctrl.userTemp);
                     });
@@ -192,35 +195,39 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and 8 hours of daylight";
-                    $ctrl.recommendation = "Based on your preferences, check out A"
+                    ;
                 } else if ($ctrl.userDay >= 0 && $ctrl.userDay <= 33 && $ctrl.userTemp >= 21 && $ctrl.userTemp <= 40 &&
-                    $ctrl.userData.currently.temperature >= 21 && $ctrl.userData.currently.temperature <= 40 &&
+                    $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours <= 8
                 ) {
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 40 degrees and 8 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 0 && $ctrl.userDay <= 33 && $ctrl.userTemp >= 41 && $ctrl.userTemp <= 60 &&
-                    $ctrl.userData.currently.temperature >= 41 && $ctrl.userData.currently.temperature <= 60 &&
+                    $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <= 60 &&
                     $ctrl.totalHours <= 8
                 ) {
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 60 degrees and 8 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 0 && $ctrl.userDay <= 33 && $ctrl.userTemp >= 61 && $ctrl.userTemp <= 80 &&
-                    $ctrl.userData.currently.temperature >= 61 && $ctrl.userData.currently.temperature <= 80 &&
+                    $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <= 80 &&
                     $ctrl.totalHours <= 8
                 ) {
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 80 degrees and 8 hours of daylight";
+                      
                 } else if ($ctrl.userDay >= 0 && $ctrl.userDay <= 33 && $ctrl.userTemp >= 81 && $ctrl.userTemp <= 100 &&
-                    $ctrl.userData.currently.temperature >= 81 && $ctrl.userData.currently.temperature <= 100 &&
+                    $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours <= 8
                 ) {
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and 8 hours of daylight";
+                     
                 }
 
                 //10 hour 0 to 100 temp
@@ -231,6 +238,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and around 10 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 34 && $ctrl.userDay <= 42 && $ctrl.userTemp >= 20.01 && $ctrl.userTemp <= 40 &&
                     $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours >= 8 && $ctrl.totalHours <= 10
@@ -238,6 +246,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 40 degrees and around 10 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 34 && $ctrl.userDay <= 42 && $ctrl.userTemp >= 41 && $ctrl.userTemp <= 60 &&
                     $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <= 60 &&
                     $ctrl.totalHours >= 8 && $ctrl.totalHours <= 10
@@ -245,6 +254,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 60 degrees and around 10 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 34 && $ctrl.userDay <= 42 && $ctrl.userTemp >= 61 && $ctrl.userTemp <= 80 &&
                     $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours >= 8 && $ctrl.totalHours <= 10
@@ -252,6 +262,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 80 degrees and around 10 hours of daylight";
+                      
                 } else if ($ctrl.userDay >= 34 && $ctrl.userDay <= 42 && $ctrl.userTemp >= 81 && $ctrl.userTemp <= 100 &&
                     $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours >= 8 && $ctrl.totalHours <= 10
@@ -259,6 +270,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and around 10 hours of daylight";
+                     
                 }
 
                 //12 hour 0 to 100 temp
@@ -269,6 +281,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and around 12 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 43 && $ctrl.userDay <= 50 && $ctrl.userTemp >= 21 && $ctrl.userTemp <= 40 &&
                     $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours >= 10 && $ctrl.totalHours <= 12
@@ -276,6 +289,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 40 degrees and around 12 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 43 && $ctrl.userDay <= 50 && $ctrl.userTemp >= 41 && $ctrl.userTemp <= 60 &&
                     $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <= 60 &&
                     $ctrl.totalHours >= 10 && $ctrl.totalHours <= 12
@@ -283,6 +297,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 60 degrees and around 12 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 43 && $ctrl.userDay <= 50 && $ctrl.userTemp >= 61 && $ctrl.userTemp <= 80 &&
                     $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <= 80 &&
                     $ctrl.totalHours >= 10 && $ctrl.totalHours <= 12
@@ -290,6 +305,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 80 degrees and around 12 hours of daylight";
+                      
                 } else if ($ctrl.userDay >= 43 && $ctrl.userDay <= 50 && $ctrl.userTemp >= 81 && $ctrl.userTemp <= 100 &&
                     $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours >= 10 && $ctrl.totalHours <= 12
@@ -297,6 +313,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and around 12 hours of daylight";
+                     
                 }
 
                 //12 to 14 hour 0 to 100 temp
@@ -307,6 +324,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and around 14 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 21 && $ctrl.userTemp <= 40 &&
                     $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours >= 12 && $ctrl.totalHours <= 14
@@ -314,6 +332,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 40 degrees and around 14 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 41 && $ctrl.userTemp <= 60 &&
                     $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <= 60 &&
                     $ctrl.totalHours >= 12 && $ctrl.totalHours <= 14
@@ -321,6 +340,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 60 degrees and around 14 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 61 && $ctrl.userTemp <= 80 &&
                     $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <= 80 &&
                     $ctrl.totalHours >= 12 && $ctrl.totalHours <= 14
@@ -328,6 +348,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 80 degrees and around 14 hours of daylight";
+                      
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 81 && $ctrl.userTemp <= 100 &&
                     $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours >= 12 && $ctrl.totalHours <= 14
@@ -335,6 +356,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and around 14 hours of daylight";
+                     
                 }
 
                 //16 hour 0 to 100 temp
@@ -345,6 +367,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and around 16 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 21 && $ctrl.userTemp <= 40 &&
                     $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours >= 14 && $ctrl.totalHours <= 16
@@ -352,6 +375,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 40 degrees and around 16 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 41 && $ctrl.userTemp <= 60 &&
                     $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <= 60 &&
                     $ctrl.totalHours >= 14 && $ctrl.totalHours <= 16
@@ -359,6 +383,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 60 degrees and around 16 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 61 && $ctrl.userTemp <= 80 &&
                     $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <= 80 &&
                     $ctrl.totalHours >= 14 && $ctrl.totalHours <= 16
@@ -366,6 +391,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 80 degrees and around 15 hours of daylight";
+                      
                 } else if ($ctrl.userDay >= 51 && $ctrl.userDay <= 66 && $ctrl.userTemp >= 81 && $ctrl.userTemp <= 100 &&
                     $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours >= 14 && $ctrl.totalHours <= 16
@@ -373,6 +399,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and around 16 hours of daylight";
+                     
                 }
 
                 //24 hour 0 to 100 temp
@@ -383,6 +410,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 20 degrees and over 16 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 67 && $ctrl.userDay <= 100 && $ctrl.userTemp >= 21 && $ctrl.userTemp <= 40 &&
                     $ctrl.userData.currently.temperature >= 20.01 && $ctrl.userData.currently.temperature <= 40 &&
                     $ctrl.totalHours >= 17
@@ -390,6 +418,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 40 degrees and over 16 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 67 && $ctrl.userDay <= 100 && $ctrl.userTemp >= 41 && $ctrl.userTemp <= 60 &&
                     $ctrl.userData.currently.temperature >= 40.01 && $ctrl.userData.currently.temperature <= 60 &&
                     $ctrl.totalHours >= 17
@@ -397,6 +426,7 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 60 degrees and over 16 hours of daylight";
+                    
                 } else if ($ctrl.userDay >= 67 && $ctrl.userDay <= 100 && $ctrl.userTemp >= 61 && $ctrl.userTemp <= 80 &&
                     $ctrl.userData.currently.temperature >= 60.01 && $ctrl.userData.currently.temperature <= 80 &&
                     $ctrl.totalHours >= 17
@@ -404,53 +434,41 @@
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
                     $ctrl.matchPicText = "This day matches your preferences with less than 80 degrees and over 16 hours of daylight";
+                      
                 } else if ($ctrl.userDay >= 67 && $ctrl.userDay <= 100 && $ctrl.userTemp >= 81 && $ctrl.userTemp <= 100 &&
                     $ctrl.userData.currently.temperature >= 80.01 && $ctrl.userData.currently.temperature <= 100 &&
                     $ctrl.totalHours >= 17
                 ) {
                     $ctrl.matchPic = "images/happy.png";
                     $ctrl.userClass = "speech-bubble-match";
-                        $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and over 16 hours of daylight";
+                    $ctrl.matchPicText = "This day matches your preferences with less than 100 degrees and over 16 hours of daylight";
+                     
                 } else {
                     $ctrl.matchPic = "images/sad.png";
                     $ctrl.userClass = "speech-bubble-nomatch";
-                    $ctrl.noMatchText;
-                    $ctrl.matchPicText = "Your current location does not match your preferences."
+                    $ctrl.matchPicText = "Your location does not match your preferences."
                 }
 
 
 
 
             };
-
-            $ctrl.getCurrentLocation = function () {
-
-                if (navigator.geolocation) {
-
-                    // timeout at 60000 milliseconds (60 seconds)
-                    var options = {
-                        timeout: 1000
-                    };
-                    navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
-                } else {
-                    alert("Sorry, browser does not support geolocation!");
-                }
-
-                function showLocation(position) {
-                    var latitude = position.coords.latitude;
-                    var longitude = position.coords.longitude;
-                    alert("Latitude : " + latitude + " Longitude: " + longitude);
-                }
-
-                function errorHandler(err) {
-                    if (err.code == 1) {
-                        alert("Error: Access is denied!");
-                    } else if (err.code == 2) {
-                        alert("Error: Position is unavailable!");
-                    }
-                }
-
+            $ctrl.recommend = function () {
+            if ($ctrl.userTemp >= 0 && $ctrl.userTemp <= 20) {
+                $ctrl.recommendation = "Based on your preferences, check out Portland, ME or Green Bay, WI";
+            } else if ($ctrl.userTemp >= 21 && $ctrl.userTemp <= 40) {
+                $ctrl.recommendation = "Based on your preferences, check out Nashville, TN or Omaha, NE";
+            } else if ($ctrl.userTemp >= 41 && $ctrl.userTemp <= 60) {
+                $ctrl.recommendation = "Based on your preferences, check out Atlanta, GA or New Orleans, LA";
+            } else if ($ctrl.userTemp >= 61 && $ctrl.userTemp <= 80) {
+                $ctrl.recommendation = "Based on your preferences, check out Austin, TX or Orlando, FL";
+            } else if ($ctrl.userTemp >= 81 && $ctrl.userTemp <= 100) {
+                $ctrl.recommendation = "Based on your preferences, check out Los Angeles, CA or Honolulu, HI ";
             }
+            else {
+                $ctrl.recommendation = "Try searching your favorite city"
+            }
+        };
 
 
 

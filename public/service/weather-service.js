@@ -13,18 +13,7 @@
 
             service.userdaypref = null;
             service.usertemppref = null;
-            service.boardMessages = [
-                {name: 'Devin Scillian', 
-                location: 'Detroit',
-                message: 'Roads are icy today.'}, 
-                {name: 'Kim Gill',
-                location: 'Detroit',
-                message: 'Make sure to bring hats and gloves'},
-                {name: 'Rhonda Walker',
-                location: 'Detroit',
-                message: 'First one to post here! '}, 
-
-            ];
+          
             service.getLocation = function (search){ 
                 let apiKey = 'AIzaSyBdFcPIEFuPTF-m6mnU2JdDQNQthUGOTkY';
                 return $http.post('/proxy/https://maps.googleapis.com/maps/api/geocode/json?components=locality:'+ search +'&key=' + apiKey)
