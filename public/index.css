@@ -1,5 +1,6 @@
 body {
   background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
+  font-family: 'Raleway', sans-serif;
   /* color: rgb(80, 113, 221); */
 }
 
@@ -32,6 +33,18 @@ header {
   padding-top: 9%;
   margin-left: 13%;
   justify-content: space-around;
+}
+
+.tempOutside {
+  /* device-width: 100%; */
+  float:left;
+  margin-left: 15%;
+}
+
+.summary {
+  /* width: 100%; */
+  float: right;
+  margin-right: 1%;
 }
 
 .timezone {
@@ -112,7 +125,7 @@ header {
 .weatherPage {
   background-image: url(images/treeCropped.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
 }
 
 .speech-bubble-match {
@@ -121,7 +134,7 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 425px;
+  top: 50px;
   left: 22%;
   width: 151px;
   height: 147px;
@@ -142,10 +155,10 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 448px;
+  top: 50px;
   left: 24%;
-  width: 122px;
-  height: 106px;
+  width: 129px;
+  height: 119px;
   border: 12px solid transparent;
   border-top-color: #9b2a20;
   border-bottom: 0;
@@ -155,6 +168,12 @@ header {
   margin-bottom: 132px;
 }
 
+.showGrant {
+  position: absolute;
+  text-align: center;
+  top: 450px;
+  left: 44%;
+}
 
 .results {
   text-align: center;
@@ -168,10 +187,10 @@ header {
   border-radius: 12em;
   content: '';
   position: absolute;
-  bottom: 73px;
+  top: 200px;
   right: 21%;
-  width: 175px;
-  height: 168px;
+  width: 178px;
+  height: 176px;
   border: 12px solid transparent;
   border-top-color: rgb(9, 9, 77);
   border-bottom: 0;
@@ -183,11 +202,6 @@ header {
 
 .activity.ng-enter {
   transition: all 4s ease-in;
-  opacity: 0;
-}
-
-.activity.ng-enter {
-  transition: all 1s ease-in;
   opacity: 0;
 }
 
@@ -247,9 +261,9 @@ header {
   content: '';
   position: absolute;
   left: 25%;
-  top: 15%;
+  top: -5%;
   width: 15%;
-  height: 67px;
+  height: 97px;
   transform: rotate(-5deg);
   margin-left: -0px;
   margin-block-start: 15em;
@@ -267,6 +281,13 @@ header {
 .recommend.ng-enter.ng-enter-active {
   opacity: 1;
 }
+
+/* .label,
+.recommend,
+.whatWear,
+.activity {
+  position: sticky;
+} */
 
 .weekly {
   display: flex;
@@ -287,7 +308,8 @@ header {
 }
 
 .locationInput {
-  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-top: -22px;
   text-align: center;
 }
 
@@ -295,7 +317,8 @@ header {
   background-color: rgb(80, 113, 221);
   color: white;
   font-family: 'Raleway', sans-serif,  !important;
-  font-size: 25px;
+  font-size: 15px;
+  text-align: center;
 }
 
 .footer {
@@ -517,6 +540,11 @@ header {
     opacity: 1;
   }
 
+  .future-weekly {
+    display: flex;
+    flex-direction: row;
+  }
+
   .weekly {
     display: flex;
     flex-direction: row;
@@ -524,10 +552,6 @@ header {
     justify-content: center;
   }
 
-  .future-weekly {
-    display: flex;
-    flex-direction: column;
-  }
 
   .mainPage {
     text-align: center;
@@ -540,11 +564,22 @@ header {
     text-align: center;
   }
 
-  #submitPrefs {
+  #submitPrefs, {
     background-color: rgb(80, 113, 221);
     color: white;
     font-family: 'Raleway', sans-serif,  !important;
     font-size: 25px;
+    text-align: center;
+  }
+
+  .update {
+    background-color: rgb(80, 113, 221);
+    color: white;
+    font-family: 'Raleway', sans-serif, !important;
+    font-size: 15px;
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
   }
 
   .footer {
