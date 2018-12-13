@@ -1,7 +1,6 @@
 body {
   background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
   font-family: 'Raleway', sans-serif;
-  /* color: rgb(80, 113, 221); */
 }
 
 header {
@@ -25,6 +24,7 @@ header {
 
 .label {
   display: flex;
+  color: white;
   flex-direction: row;
   width: 70%;
   justify-content: center;
@@ -36,13 +36,11 @@ header {
 }
 
 .tempOutside {
-  /* device-width: 100%; */
   float:left;
   margin-left: 15%;
 }
 
 .summary {
-  /* width: 100%; */
   float: right;
   margin-right: 1%;
 }
@@ -51,6 +49,7 @@ header {
   font-family: 'Raleway', sans-serif;
   font-size: 30px;
   text-align: center;
+  color: white;
 }
 
 .like {
@@ -128,13 +127,17 @@ header {
   background-size: 100%;
 }
 
+.yourPrefs {
+  text-align: center;
+}
+
 .speech-bubble-match {
   font-family: 'Gamja Flower', cursive;
   background: #239b20;
   border-radius: 12em;
   content: '';
   position: absolute;
-  top: 50px;
+  top: 21px;
   left: 22%;
   width: 151px;
   height: 147px;
@@ -171,7 +174,7 @@ header {
 .showGrant {
   position: absolute;
   text-align: center;
-  top: 450px;
+  top: 310px;
   left: 44%;
 }
 
@@ -241,7 +244,6 @@ header {
   text-align: center;
 }
 
-
 .whatWear.ng-enter {
   transition: all 7s ease-in;
   opacity: 0;
@@ -256,16 +258,15 @@ header {
   background-color: rgb(195, 161, 131);
   color: rgb(46, 72, 138);
   border-radius: 12em;
-  /* box-shadow: -8px -6px 5px 0px rgba(50, 50, 50, 0.75); */
   border: dashed 2px rgb(50, 154, 218);
   content: '';
   position: absolute;
-  left: 25%;
-  top: -5%;
-  width: 15%;
-  height: 97px;
+  left: 27%;
+  top: 3%;
+  width: 14%;
+  height: 84px;
   transform: rotate(-5deg);
-  margin-left: -0px;
+  margin-left: 3px;
   margin-block-start: 15em;
   margin-block-end: 15em;
   margin-inline-start: 0px;
@@ -282,23 +283,31 @@ header {
   opacity: 1;
 }
 
-/* .label,
-.recommend,
-.whatWear,
-.activity {
-  position: sticky;
-} */
-
+.weeklyHeader{
+  text-align: center;
+  margin: 0;
+  font-size: 25px;
+  color: white;
+}
 .weekly {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
+  color: white;
 }
 
 .future-weekly {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+}
+
+#submit {
+  background-color: rgb(80, 113, 221);
+  color: white;
+  font-family: 'Raleway', sans-serif,  !important;
+  font-size: 15px;
 }
 
 .mainPage {
@@ -308,8 +317,8 @@ header {
 }
 
 .locationInput {
-  margin-bottom: 15px;
-  margin-top: -22px;
+  margin-bottom: 0;
+  margin-top: -50px;
   text-align: center;
 }
 
@@ -318,7 +327,7 @@ header {
   color: white;
   font-family: 'Raleway', sans-serif,  !important;
   font-size: 15px;
-  text-align: center;
+  /* display: inline-block; */
 }
 
 .footer {
@@ -385,8 +394,6 @@ header {
     width: auto;
     height: auto;
     overflow: hidden;
-
-
   }
 
   .img-comp-img img {
@@ -452,20 +459,11 @@ header {
     margin-bottom: 132px;
   }
 
-
   .results {
     text-align: center;
     padding-top: 3%;
     position: relative;
   }
-
-  /* .tempOutside {
-  float: left;
-}
-
-.summary {
-  float: right;
-} */
 
   .activity {
     font-family: 'Gamja Flower', cursive;
@@ -510,8 +508,6 @@ header {
   .whatWear {
     font-family: 'Gamja Flower', cursive;
     background-color: rgb(26, 221, 169);
-    /* background-image: url(images/clothing.png);
-    background-repeat: no-repeat; */
     color: rgb(38, 133, 221);
     border-radius: 12em;
     content: '';
@@ -519,8 +515,6 @@ header {
     left: 44%;
     top: 58%;
     width: 13%;
-    /* right: 40%;
-    width: 350px; */
     height: 82px;
     margin-left: -0px;
     margin-block-start: 15em;
@@ -528,7 +522,6 @@ header {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     text-align: center;
-    /* margin-bottom: -12px; */
   }
 
   .whatWear.ng-enter {
@@ -551,7 +544,6 @@ header {
     align-content: center;
     justify-content: center;
   }
-
 
   .mainPage {
     text-align: center;
