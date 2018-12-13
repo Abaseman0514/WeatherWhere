@@ -5,15 +5,17 @@
     <div class="summary">{{$ctrl.userData.currently.summary}}
     </div>
   </div>
+  
   <div class="timezone">
     {{$ctrl.userData.address || 'Detroit, MI, USA'}}
   </div>
 
+  <div class="showGrant">
+    <img src="{{$ctrl.matchPic}}" width="175px" height="250px">
+  </div>
+  
   <div class="results">
 
-    <div class="showGrant">
-      <img src="{{$ctrl.matchPic}}" width="175px" height="250px">
-    </div>
     <div class="{{$ctrl.userClass}}">{{$ctrl.matchPicText}}</div>
 
     <div class="whatWear" ng-if="$ctrl.showWear">
@@ -42,6 +44,8 @@
       <canvas id="icon{{$index}}" width="50" height="50"></canvas>
       {{future.temperatureHigh | number: 0}} &#8457;
     </section>
-
-    <button id="submitPrefs" onclick="location.href= '#!/';"><strong>Update your preferences</strong></button>
   </div>
+ 
+    <button id="submitPrefs" onclick="location.href= '#!/';"><strong>Update your preferences</strong></button>
+ 
+  
