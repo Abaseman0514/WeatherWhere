@@ -471,42 +471,49 @@ header {
     height: 100vh;
   }
 
+  .showGrant {
+    position: absolute;
+    text-align: center;
+    top: 359px;
+    left: 40%;
+  }
+
   .speech-bubble-match {
     font-family: 'Gamja Flower', cursive;
     background: #239b20;
     border-radius: 12em;
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 25%;
+    top: 359px;
+    left: 46%;
     width: 151px;
-    height: 147px;
+    height: 150px;
     border: 12px solid transparent;
     border-top-color: #239b20;
     border-bottom: 0;
     border-left: 2;
-    margin-left: 79px;
-    box-shadow: -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
-    margin-bottom: 132px;
-  }
+    margin-right: 70px;
+    box-shadow: 8px -6px 5px 0px rgba(50, 50, 50, 0.75);
+    margin-bottom: 136px;
+}
 
-  .speech-bubble-nomatch {
-    font-family: 'Gamja Flower', cursive;
-    background: #9b2a20;
-    border-radius: 12em;
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 14%;
-    width: 111px;
-    height: 107px;
-    border: 12px solid transparent;
-    border-top-color: #9b2a20;
-    border-bottom: 0;
-    border-left: 2;
-    margin-left: 79px;
-    box-shadow: -8px -6px 5px 0px rgba(50, 50, 50, 0.75);
-    margin-bottom: 132px;
+   .speech-bubble-nomatch {
+     font-family: 'Gamja Flower', cursive;
+      background: #9b2a20;
+      border-radius: 12em;
+      content: '';
+      position: absolute;
+      top: 342px;
+      left: 50%;
+      width: 111px;
+      height: 147px;
+      border: 12px solid transparent;
+      border-top-color: #9b2a20;
+      border-bottom: 0;
+      border-left: 2;
+      margin-right: 79px;
+      box-shadow: 8px -6px 5px 0px rgba(50, 50, 50, 0.75);
+      margin-bottom: 132px;
   }
 
   .results {
@@ -516,10 +523,10 @@ header {
   }
 
   .activity {
-    right: 15%;
+    top: 50px;
+    left: 55%;
     width: 136px;
-    height: 135px;
-    top: 75px;
+    height: 155px;
   }
 
   #activity {
@@ -527,11 +534,11 @@ header {
   }
 
   .recommend {
-    left: 23%;
-    top: 200%;
+    left: 25%;
+    top: 337%;
     width: 20%;
-    height: 84px;
-  }
+    height: 96px;
+}
 
   .activity.ng-enter {
     transition: all 3s ease-in;
@@ -555,14 +562,16 @@ header {
   }
 
   .whatWear {
+    position: absolute;
+    left: 23%;
+    top: 200%;
     width: 19%;
-    height: 76px;
-    margin-left: -33px;
+    height: 100px;
+    margin-left: 15px;
     margin-block-start: 1em;
-    top: 50%;
-  }
-
-  .whatWear.ng-enter {
+    }
+  
+    .whatWear.ng-enter {
     transition: all 6s ease-in;
     opacity: 0;
   }
@@ -575,6 +584,19 @@ header {
     display: flex;
     flex-direction: column;
     padding: 4px;
+    font-size: 10px;
+    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+    width: 50%;
+    
+  }
+
+  .weeklyHeader {
+    /* text-align: center;
+    margin: 0; */
+    font-size: 15px;
+    color: white;
+    padding-top: 50px;
+  padding-bottom: 20px;
   }
 
   .weekly {
@@ -582,6 +604,8 @@ header {
     flex-direction: row;
     align-content: center;
     justify-content: center;
+    width: 13%;
+    margin-left: 44%;
   }
 
   .mainPage {
@@ -613,6 +637,7 @@ header {
     text-align: center;
     width: 30%;
     margin-left: 35%;
+    padding-top: 15px;
   }
 
   .footer {
