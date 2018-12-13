@@ -2,15 +2,14 @@ body {
   background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
   font-family: 'Raleway', sans-serif;
 }
-
 header {
-  background-image: url(images/header.jpg);
-  background-repeat: no-repeat;
+  /* background-image: url(images/header.jpg); */
+  background-image: none;
+  /* background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  height: 100px; */
 }
-
-.title {
+/* .title {
   display: flex;
   height: 100%;
   font-family: 'Courgette', cursive;
@@ -20,7 +19,7 @@ header {
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: -96px;
-}
+} */
 
 .label {
   display: flex;
@@ -340,11 +339,20 @@ header {
 @media only screen and (max-width: 768px) {
 
   header {
+    background-image: url(images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100px;
   }
-
   .title {
+    display: flex;
+    height: 100%;
+    font-family: 'Courgette', cursive;
     font-size: 40px;
+    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+    color: rgb(163, 91, 196);
+    justify-content: flex-end;
+    align-items: flex-end;
     margin-top: -50px;
   }
 
@@ -354,7 +362,20 @@ header {
     color: rgb(181, 154, 194);
     text-decoration-line: underline;
   }
+  .label {
+    font-size: 18px;
+    padding-top: 16%;
+  }
+  .tempOutside {
+    margin-left: -4%;
+  }
+  .summary {
+    margin-right: -10%;
+  }
 
+  .timezone {
+    font-size: 18px;
+  }
   .prefs {
     width: 400px;
     margin: 0 auto;
@@ -447,9 +468,9 @@ header {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 25%;
-    width: 151px;
-    height: 145px;
+    left: 14%;
+    width: 111px;
+    height: 107px;
     border: 12px solid transparent;
     border-top-color: #9b2a20;
     border-bottom: 0;
@@ -466,24 +487,44 @@ header {
   }
 
   .activity {
-    font-family: 'Gamja Flower', cursive;
+    /* font-family: 'Gamja Flower', cursive;
     background: rgb(9, 9, 77);
     border-radius: 12em;
     content: '';
-    position: absolute;
-    bottom: -100px;
-    right: 25%;
-    width: 175px;
-    height: 168px;
-    border: 12px solid transparent;
+    position: absolute; */
+    /* bottom: -100px; */
+    right: 15%;
+    width: 152px;
+    height: 156px;
+    /* border: 12px solid transparent;
     border-top-color: rgb(9, 9, 77);
     border-bottom: 0;
     border-left: 2;
     margin-right: 70px;
     box-shadow: 8px -6px 5px 0px rgba(50, 50, 50, 0.75);
-    margin-bottom: 136px;
+    margin-bottom: 136px; */
   }
-
+  .recommend {
+    /* font-family: 'Gamja Flower', cursive;
+    background-color: rgb(195, 161, 131);
+    color: rgb(46, 72, 138);
+    border-radius: 12em;
+    border: dashed 2px rgb(50, 154, 218);
+    content: '';
+    position: absolute; */
+    left: 27%;
+    top: 182%;
+    width: 17%;
+    height: 99px;
+    /* transform: rotate(-5deg);
+    margin-left: 3px;
+    margin-block-start: 15em;
+    margin-block-end: 15em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center; */
+  }
+  
   .activity.ng-enter {
     transition: all 3s ease-in;
     opacity: 0;
@@ -506,22 +547,22 @@ header {
   }
 
   .whatWear {
-    font-family: 'Gamja Flower', cursive;
+    /* font-family: 'Gamja Flower', cursive;
     background-color: rgb(26, 221, 169);
     color: rgb(38, 133, 221);
     border-radius: 12em;
     content: '';
     position: absolute;
     left: 44%;
-    top: 58%;
-    width: 13%;
-    height: 82px;
+    top: 58%; */
+    width: 19%;
+    height: 76px;
     margin-left: -0px;
-    margin-block-start: 15em;
-    margin-block-end: 15em;
+    margin-block-start: 4em;
+    /* margin-block-end: 15em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    text-align: center;
+    text-align: center; */
   }
 
   .whatWear.ng-enter {
@@ -535,7 +576,8 @@ header {
 
   .future-weekly {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 3px;
   }
 
   .weekly {
@@ -552,7 +594,8 @@ header {
   }
 
   .locationInput {
-    margin-top: 50px;
+    margin-top: -13px;
+    margin-bottom: 420px;
     text-align: center;
   }
 
@@ -583,6 +626,13 @@ header {
 
   @media only screen and (max-width: 480px) {
 
+    header {
+      background-image: url(images/header.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100px;
+    }
+
     .title {
       font-size: 35px;
     }
@@ -591,5 +641,70 @@ header {
       background-color: rgb(183, 112, 206);
       font-size: 18px;
     }
+    .weekly {
+      flex-direction: column;
+      color: black;
+    }
+    .locationInput{
+      margin-top: 2%;
+    }
+    .weatherPage {
+      background-image: none;
+      background-repeat: no-repeat;
+    }
+    .weekly {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      color: white;
+    }
+    
+    .future-weekly {
+      display: flex;
+      flex-direction: column;
+      /* padding: 15px; */
+    }
+    .weeklyHeader{
+      display: none;
+    }
+    .label {
+      font-size: 18px;
+      padding-top: 7%;
+  }
+  .speech-bubble-nomatch {
+    left: -5%
+}
+ canvas {
+   width: 30px;
+   height: 30px;
+ }
+ .recommend{
+  left: 58%;
+  top: 249%;
+  width: 41%;
+  height: 99px;
+ }
+ #activity {
+  margin-top: -15px;
+  color: rgb(80, 113, 221);
+  font-size: 15px;
+}
+.activity {
+  /* bottom: -100px; */
+  right: -16%;
+  width: 138px;
+  height: 126px;
+}
+ .whatWear{
+ width: 37%;
+ height: 76px;
+ margin-left: -0px;
+ margin-block-start: 6em;
+ }
+ .timezone {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
   }
 }
