@@ -2,14 +2,19 @@ body {
   background-image: linear-gradient(rgb(83, 24, 110), #0f270f, rgb(63, 62, 62));
   font-family: 'Raleway', sans-serif;
 }
+
 header {
-  /* background-image: url(images/header.jpg); */
-  background-image: none;
-  /* background-repeat: no-repeat;
+  background-image: url(images/header.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 100px; */
+  height: 100px;
 }
-/* .title {
+
+.head {
+  display: none;
+}
+
+.title {
   display: flex;
   height: 100%;
   font-family: 'Courgette', cursive;
@@ -19,7 +24,10 @@ header {
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: -96px;
-} */
+}
+.titleWeather{
+  display: none;
+}
 
 .label {
   display: flex;
@@ -35,7 +43,7 @@ header {
 }
 
 .tempOutside {
-  float:left;
+  float: left;
   margin-left: 15%;
 }
 
@@ -282,12 +290,13 @@ header {
   opacity: 1;
 }
 
-.weeklyHeader{
+.weeklyHeader {
   text-align: center;
   margin: 0;
   font-size: 25px;
   color: white;
 }
+
 .weekly {
   display: flex;
   flex-direction: row;
@@ -338,12 +347,25 @@ header {
 /* tablets */
 @media only screen and (max-width: 768px) {
 
-  header {
+  .head {
     background-image: url(images/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100px;
   }
+
+  .titleWeather {
+    display: flex;
+    height: 100%;
+    font-family: 'Courgette', cursive;
+    font-size: 40px;
+    text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+    color: rgb(163, 91, 196);
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: -50px;
+  }
+
   .title {
     display: flex;
     height: 100%;
@@ -356,19 +378,23 @@ header {
     margin-top: -50px;
   }
 
+
   .like {
     font-size: 30px;
     text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
     color: rgb(181, 154, 194);
     text-decoration-line: underline;
   }
+
   .label {
     font-size: 18px;
     padding-top: 16%;
   }
+
   .tempOutside {
     margin-left: -4%;
   }
+
   .summary {
     margin-right: -10%;
   }
@@ -376,11 +402,14 @@ header {
   .timezone {
     font-size: 18px;
   }
+
   .prefs {
     width: 400px;
     margin: 0 auto;
   }
-
+  .showGrant {
+    left: 39%;
+  }
   .explanationTemp,
   .explanationDay {
     font-family: 'Raleway', sans-serif;
@@ -487,44 +516,23 @@ header {
   }
 
   .activity {
-    /* font-family: 'Gamja Flower', cursive;
-    background: rgb(9, 9, 77);
-    border-radius: 12em;
-    content: '';
-    position: absolute; */
-    /* bottom: -100px; */
     right: 15%;
-    width: 152px;
-    height: 156px;
-    /* border: 12px solid transparent;
-    border-top-color: rgb(9, 9, 77);
-    border-bottom: 0;
-    border-left: 2;
-    margin-right: 70px;
-    box-shadow: 8px -6px 5px 0px rgba(50, 50, 50, 0.75);
-    margin-bottom: 136px; */
+    width: 136px;
+    height: 135px;
+    top: 75px;
   }
+
+  #activity {
+    font-size: 15px;
+  }
+
   .recommend {
-    /* font-family: 'Gamja Flower', cursive;
-    background-color: rgb(195, 161, 131);
-    color: rgb(46, 72, 138);
-    border-radius: 12em;
-    border: dashed 2px rgb(50, 154, 218);
-    content: '';
-    position: absolute; */
-    left: 27%;
-    top: 182%;
-    width: 17%;
-    height: 99px;
-    /* transform: rotate(-5deg);
-    margin-left: 3px;
-    margin-block-start: 15em;
-    margin-block-end: 15em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: center; */
+    left: 23%;
+    top: 200%;
+    width: 20%;
+    height: 84px;
   }
-  
+
   .activity.ng-enter {
     transition: all 3s ease-in;
     opacity: 0;
@@ -547,22 +555,11 @@ header {
   }
 
   .whatWear {
-    /* font-family: 'Gamja Flower', cursive;
-    background-color: rgb(26, 221, 169);
-    color: rgb(38, 133, 221);
-    border-radius: 12em;
-    content: '';
-    position: absolute;
-    left: 44%;
-    top: 58%; */
     width: 19%;
     height: 76px;
-    margin-left: -0px;
-    margin-block-start: 4em;
-    /* margin-block-end: 15em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-align: center; */
+    margin-left: -33px;
+    margin-block-start: 1em;
+    top: 50%;
   }
 
   .whatWear.ng-enter {
@@ -577,7 +574,7 @@ header {
   .future-weekly {
     display: flex;
     flex-direction: column;
-    padding: 3px;
+    padding: 4px;
   }
 
   .weekly {
@@ -599,7 +596,8 @@ header {
     text-align: center;
   }
 
-  #submitPrefs, {
+  #submitPrefs,
+    {
     background-color: rgb(80, 113, 221);
     color: white;
     font-family: 'Raleway', sans-serif,  !important;
@@ -610,7 +608,7 @@ header {
   .update {
     background-color: rgb(80, 113, 221);
     color: white;
-    font-family: 'Raleway', sans-serif, !important;
+    font-family: 'Raleway', sans-serif,  !important;
     font-size: 15px;
     text-align: center;
     width: 30%;
@@ -623,35 +621,58 @@ header {
     color: white;
   }
 
-
   @media only screen and (max-width: 480px) {
 
-    header {
+    .title {
+      display: flex;
+      height: 100%;
+      font-family: 'Courgette', cursive;
+      font-size: 30px;
+      text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+      color: rgb(163, 91, 196);
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-top: -50px;
+    }
+
+    .head {
       background-image: url(images/header.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       height: 100px;
     }
 
-    .title {
-      font-size: 35px;
+    .titleWeather {
+      display: flex;
+      height: 100%;
+      font-family: 'Courgette', cursive;
+      font-size: 30px;
+      text-shadow: -5px -1px 10px rgba(47, 19, 70, 0.87);
+      color: rgb(163, 91, 196);
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-top: -50px;
     }
 
     #submitPrefs {
       background-color: rgb(183, 112, 206);
       font-size: 18px;
     }
+
     .weekly {
       flex-direction: column;
       color: black;
     }
-    .locationInput{
+
+    .locationInput {
       margin-top: 2%;
     }
+
     .weatherPage {
       background-image: none;
       background-repeat: no-repeat;
     }
+
     .weekly {
       display: flex;
       flex-direction: column;
@@ -659,52 +680,71 @@ header {
       justify-content: center;
       color: white;
     }
-    
+
     .future-weekly {
       display: flex;
       flex-direction: column;
       /* padding: 15px; */
     }
-    .weeklyHeader{
+
+    .weeklyHeader {
       display: none;
     }
+
     .label {
       font-size: 18px;
       padding-top: 7%;
-  }
-  .speech-bubble-nomatch {
-    left: -5%
-}
- canvas {
-   width: 30px;
-   height: 30px;
- }
- .recommend{
-  left: 58%;
-  top: 249%;
-  width: 41%;
-  height: 99px;
- }
- #activity {
-  margin-top: -15px;
-  color: rgb(80, 113, 221);
-  font-size: 15px;
-}
-.activity {
-  /* bottom: -100px; */
-  right: -16%;
-  width: 138px;
-  height: 126px;
-}
- .whatWear{
- width: 37%;
- height: 76px;
- margin-left: -0px;
- margin-block-start: 6em;
- }
- .timezone {
-  font-size: 18px;
-  padding-bottom: 10px;
-}
+    }
+
+    .speech-bubble-nomatch {
+      left: -5%
+    }
+    .speech-bubble-match {
+      left: -6%;
+      width: 146px;
+      height: 136px;
+      margin-top: 30px;
+    }
+
+    canvas {
+      width: 30px;
+      height: 30px;
+    }
+
+    .recommend {
+      left: 58%;
+      top: 249%;
+      width: 41%;
+      height: 99px;
+    }
+
+    #activity {
+      margin-top: -15px;
+      color: rgb(80, 113, 221);
+      font-size: 15px;
+    }
+
+    .activity {
+      /* bottom: -100px; */
+      right: -16%;
+      width: 138px;
+      height: 126px;
+    }
+
+    .whatWear {
+      width: 37%;
+      height: 76px;
+      margin-left: -0px;
+      margin-block-start: 6em;
+    }
+
+    .timezone {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+    .showGrant {
+      top: 255px;
+      left: 19%;
+    }
   }
 }
