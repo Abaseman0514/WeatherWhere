@@ -684,10 +684,11 @@ header {
       font-size: 18px;
     }
 
-    .weekly {
+    /* .weekly {
       flex-direction: column;
       color: black;
-    }
+      align-content: flex-start;
+    } */
 
     .locationInput {
       margin-top: 2%;
@@ -698,19 +699,20 @@ header {
       background-repeat: no-repeat;
     }
 
-    .weekly {
+    /* .weekly {
       display: flex;
       flex-direction: column;
       align-content: center;
       justify-content: center;
       color: white;
-    }
+    } */
 
-    .future-weekly {
+    /* .future-weekly {
       display: flex;
       flex-direction: column;
+      align-content: flex-start;
       /* padding: 15px; */
-    }
+    } */
 
     .weeklyHeader {
       display: none;
@@ -772,4 +774,3 @@ header {
       left: 19%;
     }
   }
-}
